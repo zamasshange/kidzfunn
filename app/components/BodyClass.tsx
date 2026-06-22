@@ -8,10 +8,11 @@ type BodyClassProps = {
 
 export default function BodyClass({ className }: BodyClassProps) {
   useEffect(() => {
-    const previous = document.body.className;
-    document.body.className = className;
+    const classes = className.split(/\s+/).filter(Boolean);
+    classes.forEach((name) => document.body.classList.add(name));
+
     return () => {
-      document.body.className = previous;
+      classes.forEach((name) => document.body.classList.remove(name));
     };
   }, [className]);
 

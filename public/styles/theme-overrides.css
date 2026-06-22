@@ -350,16 +350,47 @@ html.fp-enabled body {
 	}
 
 	/* Hide announcement once user scrolls past the first slide */
-	body.slider-past-first .home #fullpage .featured-classes-wrap {
-		opacity: 0;
-		visibility: hidden;
-		pointer-events: none;
-		transition: opacity 0.35s ease, visibility 0.35s ease;
+	body.home.slider-past-first .featured-classes-wrap,
+	body.home.slider-on-footer .featured-classes-wrap {
+		display: none !important;
+		opacity: 0 !important;
+		visibility: hidden !important;
+		pointer-events: none !important;
 	}
 
-	/* Footer slide: content fills viewport, subfooter pinned to bottom */
-	body.slider-on-footer .vertical-slider .section.fp-auto-height-responsive .site-footer {
-		padding-top: 4.5rem !important;
+	/* Footer slide — fill viewport like BADM reference */
+	body.home .vertical-slider .badm-slider-track > .section.fp-auto-height-responsive {
+		display: flex;
+		flex-direction: column;
+	}
+
+	body.home.slider-on-footer .vertical-slider .section.fp-auto-height-responsive .site-footer,
+	body.home .vertical-slider .section.fp-auto-height-responsive.is-active .site-footer {
+		flex: 1 1 auto;
+		width: 100%;
+		height: 100% !important;
+		min-height: 100% !important;
+		max-height: 100%;
+		justify-content: space-between !important;
+		padding-top: 4.75rem !important;
+		padding-bottom: 1.25rem !important;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+
+	body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__main {
+		flex: 0 0 auto;
+		padding: 0.5rem 0 0 !important;
+	}
+
+	body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__top {
+		gap: 1rem;
+	}
+
+	body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__subfooter {
+		margin-top: auto !important;
+		flex-shrink: 0;
+		padding-bottom: 0.25rem;
 	}
 
 	/* Hide testimonial cards — reference shows headline + CTA only */

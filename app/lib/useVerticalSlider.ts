@@ -108,6 +108,7 @@ export function useVerticalSlider(containerId = 'fullpage') {
 
       document.body.classList.toggle('slider-past-first', index > 0);
       document.body.classList.toggle('slider-on-footer', index === sections.length - 1);
+      document.body.dataset.sliderIndex = String(index);
 
       sections.forEach((section, i) => {
         const isCurrent = i === index;
@@ -294,6 +295,7 @@ export function useVerticalSlider(containerId = 'fullpage') {
 
       document.documentElement.classList.remove('fp-enabled');
       document.body.classList.remove('fp-enabled', 'stick', 'slider-past-first', 'slider-on-footer');
+      delete document.body.dataset.sliderIndex;
 
       slider.style.removeProperty('--slide-h');
       container.style.removeProperty('--slide-h');
