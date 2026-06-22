@@ -13,28 +13,40 @@ export default function AnnouncementBar() {
     if (!wrap) return;
 
     const masthead = document.getElementById('masthead');
+    const mobileHeader = document.querySelector('.mobile-header');
     const fullpage = document.getElementById('fullpage');
     const originalParent = wrap.parentNode;
     const originalNext = wrap.nextSibling;
 
-    const moveForMobile = () => {
+    const placeBar = () => {
       if (!originalParent || !fullpage) return;
+
       if (window.innerWidth <= 768) {
         if (!fullpage.contains(wrap)) {
           fullpage.appendChild(wrap);
         }
-      } else if (!originalParent.contains(wrap)) {
+        return;
+      }
+
+      if (!originalParent.contains(wrap)) {
         originalParent.insertBefore(wrap, originalNext);
+      }
+
+      if (masthead && wrap.previousElementSibling !== masthead) {
+        masthead.insertAdjacentElement('afterend', wrap);
       }
     };
 
-    if (masthead && wrap.parentNode !== masthead.parentNode) {
+    // Initial anchor before first responsive placement
+    if (window.innerWidth > 1023 && masthead) {
       masthead.insertAdjacentElement('afterend', wrap);
+    } else if (window.innerWidth <= 1023 && mobileHeader) {
+      mobileHeader.insertAdjacentElement('afterend', wrap);
     }
 
-    moveForMobile();
-    window.addEventListener('resize', moveForMobile);
-    return () => window.removeEventListener('resize', moveForMobile);
+    placeBar();
+    window.addEventListener('resize', placeBar);
+    return () => window.removeEventListener('resize', placeBar);
   }, []);
 
   return (

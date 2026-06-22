@@ -95,6 +95,11 @@ body {
   .featured-classes-content {
     flex: 1;
   }
+
+  /* When moved into the homepage slider, pin below the fixed mobile header */
+  #fullpage > .featured-classes-wrap .featured-classes-bar {
+    top: 4.0625rem;
+  }
 }
 
 @media (max-width: 440px) {

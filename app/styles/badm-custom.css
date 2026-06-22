@@ -489,9 +489,16 @@ html.fp-enabled body.home #fullpage.badm-scroll-slider {
 
 @media (max-width: 1023px) {
 	html.fp-enabled body.home #vertical-slider {
-		top: 152px;
-		height: calc(100vh - 152px);
-		max-height: calc(100vh - 152px);
+		top: 0;
+		height: 100vh;
+		height: 100dvh;
+		max-height: 100vh;
+		max-height: 100dvh;
+	}
+
+	html.fp-enabled body.home.stick main,
+	html.fp-enabled body.home.stick #primary {
+		padding-top: 0 !important;
 	}
 }
 

@@ -293,3 +293,120 @@ html.fp-enabled body {
 		white-space: nowrap !important;
 	}
 }
+
+/* ============================================================
+   Mobile homepage — matches BADM reference layout
+   Full-viewport slider, fixed header + announcement overlay,
+   diagonal text panel, left slide dots.
+   ============================================================ */
+@media (max-width: 1023px) {
+	.home .site-header {
+		display: none !important;
+	}
+
+	.home .mobile-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 100000;
+	}
+
+	/* Announcement overlays hero directly below the mobile header */
+	.home #fullpage .featured-classes-wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		z-index: 90;
+		overflow: visible;
+		pointer-events: none;
+	}
+
+	.home #fullpage .featured-classes-bar {
+		top: 4.0625rem;
+		left: 0 !important;
+		width: 100%;
+		right: 0;
+		pointer-events: auto;
+	}
+
+	.home .featured-classes-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2px;
+		width: 100%;
+	}
+
+	.home .featured-classes-bar span.fci {
+		display: block;
+		line-height: 1.35;
+	}
+
+	.home .featured-classes-bar span.sep {
+		display: none !important;
+	}
+
+	/* Hide testimonial cards — reference shows headline + CTA only */
+	.home .testimonial-item {
+		display: none !important;
+	}
+
+	/* Hero image fills slide; text panel sits on diagonal at bottom */
+	.home .vertical-slider .section.box picture {
+		position: absolute;
+		inset: 0;
+	}
+
+	.home .vertical-slider .section.box picture .cover-img {
+		object-fit: cover;
+		object-position: center top;
+	}
+
+	.home .vertical-slider__text {
+		z-index: 95;
+	}
+
+	.home .vertical-slider__heading {
+		font-size: 2rem;
+		line-height: 1.05;
+		max-width: calc(100% - 2.5rem);
+	}
+
+	.home .vertical-slider__cta a.vertical-slider__button {
+		font-size: 0.9375rem;
+		line-height: 1.3;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+	}
+
+	/* Left slide dots + sun icon (fp-nav injected by slider JS) */
+	.home #fp-nav.fp-left {
+		z-index: 100;
+		bottom: 0;
+		left: 0.25rem;
+		top: auto;
+		transform: none;
+	}
+}
+
+@media (max-width: 430px) {
+	.home .vertical-slider__heading {
+		font-size: 1.875rem;
+	}
+
+	.home .vertical-slider__heading br {
+		display: none;
+	}
+
+	.home .vertical-slider__text {
+		padding: 5rem 2.5rem 2rem 3.125rem;
+	}
+
+	.home .vertical-slider__cta a.vertical-slider__button {
+		font-size: 0.875rem;
+	}
+}
