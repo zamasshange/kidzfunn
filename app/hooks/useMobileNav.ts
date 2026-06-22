@@ -14,7 +14,16 @@ export function useMobileNav() {
       toslide?.classList.toggle('active');
     };
 
+    const onBackdropClick = (event: MouseEvent) => {
+      if (!toslide?.classList.contains('active')) return;
+      const target = event.target as HTMLElement;
+      if (target === toslide) {
+        toslide.classList.remove('active');
+      }
+    };
+
     toggles.forEach((toggle) => toggle.addEventListener('click', onToggleMenu));
+    toslide?.addEventListener('click', onBackdropClick);
 
     const parentLinks = document.querySelectorAll<HTMLAnchorElement>(
       '#mobile-menu > .menu-item-has-children > a'
@@ -35,6 +44,7 @@ export function useMobileNav() {
 
     return () => {
       toggles.forEach((toggle) => toggle.removeEventListener('click', onToggleMenu));
+      toslide?.removeEventListener('click', onBackdropClick);
       parentLinks.forEach((link) => link.removeEventListener('click', onParentClick));
     };
   }, []);

@@ -6,6 +6,7 @@ import './styles/membership-blocks.css';
 import './styles/give-page.css';
 import './styles/tile-grid.css';
 import './styles/programs-at-site.css';
+import './styles/mobile-responsive.css';
 import { siteConfig } from './lib/siteConfig';
 import { themeStyles } from './lib/assets';
 

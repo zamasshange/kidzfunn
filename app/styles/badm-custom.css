@@ -2058,7 +2058,9 @@ width: 100%;
 }
 .admission-block .ticket-price.wp-block-columns.is-layout-flex {
     display: grid !important;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.75rem 1rem;
+    align-items: start;
 }
 .admission-block .wp-block-media-text {
     margin-bottom: 20px;
