@@ -82,7 +82,7 @@ export default function Footer() {
             <div className="site-footer__col site-footer__col-subscribe site-footer__connect">
               <div className="site-footer__col-heading">Subscribe</div>
               <div className="site-footer__form">
-                <p className="site-footer__text">Get news and event updates from the museum.</p>
+                <p className="site-footer__text">Get news and event updates from {siteConfig.name}.</p>
               </div>
             </div>
 

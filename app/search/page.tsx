@@ -6,7 +6,7 @@ import { routes } from '../lib/routes';
 const searchablePages = [
   { title: 'Plan Your Visit', href: routes.tickets, keywords: ['hours', 'admission', 'tickets', 'visit'] },
   { title: 'Membership', href: routes.membership, keywords: ['member', 'join', 'renew'] },
-  { title: 'Discovery Zones', href: routes.discoveryZones, keywords: ['exhibits', 'play', 'wobbleland'] },
+  { title: 'Discovery Zones', href: routes.discoveryZones, keywords: ['play zones', 'play', 'toddler'] },
   { title: 'Events', href: routes.events, keywords: ['pride', 'goblin', 'festival'] },
   { title: 'Bubble Bash', href: routes.bubbleBash, keywords: ['bubbles', 'foam', 'summer'] },
   { title: 'Summer Camps', href: routes.summerCamps, keywords: ['camp', 'summer'] },
@@ -15,7 +15,7 @@ const searchablePages = [
   { title: 'Loyalty Program', href: routes.give, keywords: ['loyalty', 'rewards', 'benefits'] },
   { title: 'Contact Us', href: routes.contact, keywords: ['email', 'phone', 'directions'] },
   { title: 'About Us', href: '/about/', keywords: ['mission', 'board', 'staff'] },
-  { title: 'Field Trips', href: routes.workshopsAtMuseum, keywords: ['school', 'field trip'] },
+  { title: 'School Outings', href: routes.workshopsAtMuseum, keywords: ['school', 'field trip', 'outing'] },
   { title: 'Programs at Your Site', href: routes.workshopsAtYourSite, keywords: ['try it truck', 'steaM'] },
   { title: 'Professional Development', href: '/school-community/professional-development/', keywords: ['teacher', 'educator'] },
   { title: 'Privacy Policy', href: routes.privacyPolicy, keywords: ['privacy', 'policy'] },
@@ -60,7 +60,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
       </form>
 
       {!query ? (
-        <p>Enter a search term to find museum pages and programs.</p>
+        <p>Enter a search term to find pages and programs at {siteConfig.name}.</p>
       ) : results.length ? (
         <>
           <p>

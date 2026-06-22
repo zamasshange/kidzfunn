@@ -9,13 +9,12 @@ const festivalBenefits = [
       'No printer necessary. We’ll scan your mobile tickets or retrieve your reservation by name.',
   },
   {
-    title: 'Convenient, Complimentary Parking',
-    description: 'Free parking offers easy, stress-free access to all the excitement.',
+    title: 'Convenient Parking',
+    description: 'Easy access at our Edenvale location with parking available nearby.',
   },
   {
     title: 'Picture-Perfect Moments',
-    description:
-      `Capture magical memories with ${siteConfig.locale.landmark} as your backdrop!`,
+    description: `Capture magical memories with ${siteConfig.name} as your backdrop!`,
   },
   {
     title: 'No Cleanup or Fuss',
@@ -27,10 +26,8 @@ export const prideEvent: EventDetailData = {
   slug: 'pride',
   title: 'Pride',
   subtitle: 'A joyful celebration of family, creativity, and love in all forms.',
-  desktopImage:
-    '/images/kfh/73a0a47fd1adbc5cf8fd1e4b4a3ee9db.jpg',
-  mobileImage:
-    '/images/kfh/85ac9b565918e7ff48fe846b75a54d9f.jpg',
+  desktopImage: '/images/kfh/73a0a47fd1adbc5cf8fd1e4b4a3ee9db.jpg',
+  mobileImage: '/images/kfh/85ac9b565918e7ff48fe846b75a54d9f.jpg',
   intro: (
     <p>
       Our Pride celebration is the perfect way for the whole family to celebrate! We believe in
@@ -49,9 +46,9 @@ export const prideEvent: EventDetailData = {
   quickInfo: [
     'Tickets are not required for members.',
     'Pride is a safe space to express oneself.',
-    'No Member Hour during Pride.',
+    'Standard play centre hours apply.',
     'Doors open at 9 AM for all.',
-    'Rain or Shine Festival. This event has a rain contingency plan.',
+    'Rain or shine — indoor play continues in all weather.',
     'Attendees can bring outside food and drink.',
   ],
   activities: [
@@ -67,12 +64,11 @@ export const prideEvent: EventDetailData = {
     {
       title: 'Paper Tie Dye',
       description:
-        'Layer, blend, and mix colors with tissue paper. Make and rock your own rainbow scarf.',
+        'Layer, blend, and mix colours with tissue paper. Make and rock your own rainbow scarf.',
     },
     {
-      title: 'Drag Storytime',
-      description:
-        '10:00–11:00am and 11:30am–12:30pm. Enjoy classic stories with the drag queen Bebe Sweetbriar.',
+      title: 'Storytime',
+      description: 'Enjoy classic stories celebrating kindness, friendship, and being yourself.',
     },
     {
       title: 'Foam Party',
@@ -81,7 +77,7 @@ export const prideEvent: EventDetailData = {
   ],
   whyFamilies: [...festivalBenefits],
   disclaimer:
-    'This special event is not eligible for ACM or ASTC discounts, museum staff admission, membership guest passes, library membership cards, or Discover & Go.',
+    'Special event pricing and promotions cannot be combined with other offers. Standard membership terms apply.',
   ctaLabel: 'Plan Your Visit',
   ctaHref: routes.tickets,
 };
@@ -90,21 +86,19 @@ export const goblinJamboreeEvent: EventDetailData = {
   slug: 'goblin-jamboree',
   title: 'Goblin Jamboree',
   subtitle:
-    "Costumes on, bugs out! A just-spooky-enough Halloween fundraiser that takes over the entire museum.",
-  desktopImage:
-    '/images/kfh/ce631791efc1e0a9952e53a47dfdb29d.jpg',
-  mobileImage:
-    '/images/kfh/514891ba0a87729e9e5f9bea581d96a5.jpg',
+    'Costumes on, bugs out! A just-spooky-enough Halloween celebration across the entire play centre.',
+  desktopImage: '/images/kfh/ce631791efc1e0a9952e53a47dfdb29d.jpg',
+  mobileImage: '/images/kfh/514891ba0a87729e9e5f9bea581d96a5.jpg',
   intro: (
     <>
       <p>
-        It&apos;s more than costumes—it&apos;s a Halloween fundraiser made just for kids. Costumes
-        on, bugs out! A just-spooky-enough Halloween fundraiser that takes over the entire museum
-        bringing joy to your family—and kids across the Bay.
+        It&apos;s more than costumes—it&apos;s a Halloween celebration made just for kids. Costumes
+        on, bugs out! Goblin Jamboree takes over {siteConfig.name} with spooky-fun activities
+        bringing joy to your family and friends across Gauteng.
       </p>
       <p>
         <strong>Stay tuned for next year!</strong> Goblin Jamboree typically runs over two weekends
-        in October with special programming throughout the museum.
+        in October with special programming throughout the play centre.
       </p>
     </>
   ),
@@ -122,16 +116,16 @@ export const goblinJamboreeEvent: EventDetailData = {
   ),
   pricing: (
     <>
-      <p>All programming included in admission. Free Parking.</p>
+      <p>All programming included in admission.</p>
       <ul className="wp-block-list">
-        <li>Members – {formatZAR(admissionPrices.adult.amount)}</li>
-        <li>Family Access Members: {formatZAR(90)}</li>
-        <li>Public: {formatZAR(540)}</li>
-        <li>Museums For All*: {formatZAR(90)} (*must be purchased at the event, limit 6)</li>
+        <li>Members – standard member rates apply</li>
+        <li>Public: standard admission rates apply</li>
+        <li>Under 1s: {formatZAR(admissionPrices.baby.amount)}/hr</li>
+        <li>Children: {formatZAR(admissionPrices.child.amount)} first hour</li>
       </ul>
       <p>
-        Tickets required for members… It is a FUNdraiser! The Museum is open rain or shine! All
-        ticket sales are final. No Member Hour during Goblin Jamboree.
+        {siteConfig.name} is open rain or shine! All ticket sales are final. Special event terms
+        apply during Goblin Jamboree.
       </p>
     </>
   ),
@@ -154,12 +148,12 @@ export const goblinJamboreeEvent: EventDetailData = {
     {
       title: 'Magic Brew',
       description:
-        'Stir up some seasonal magic! In the Mud Kitchen, pint-sized potion-makers mix and mash nature’s ingredients into pretend potions.',
+        'Stir up some seasonal magic! Pint-sized potion-makers mix and mash ingredients into pretend potions.',
     },
     {
       title: 'The Beetlelady',
       description:
-        'Our friend the Beetlelady is coming to town with her scaly and many-legged bug buddies!',
+        'Meet scaly and many-legged bug buddies with our special guest naturalist!',
     },
   ],
   whyFamilies: [
@@ -176,12 +170,7 @@ export const goblinJamboreeEvent: EventDetailData = {
       <p>Saturday, October 18, 8:30 – 10:30 am</p>
       <p>
         Join us for our Goblin Jamboree kickoff party and be first to experience Goblin Jamboree.
-        Enjoy catered breakfast, hand-crafted espresso drinks and a mimosa bar.
-      </p>
-      <h2 className="wp-block-heading">Thank You To Our Corporate Sponsors!</h2>
-      <p>
-        Bloomberg Philanthropies · Clover Sonoma · Marin Community Foundation · Nugget Markets ·
-        Harbor Point Charitable Foundation
+        Enjoy a catered breakfast and family-friendly treats.
       </p>
     </>
   ),

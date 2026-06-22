@@ -105,8 +105,8 @@ export const buildACampOptions = [
       'Calling all builders, dreamers, and problem-solvers! Campers design, tinker and bring their creations to life in this hands-on engineering adventure. Perfect for kids who are always building and creating new inventions.',
   },
   {
-    title: 'Camp Option 4: Museum Mash-Up',
+    title: 'Camp Option 4: Play Zone Mash-Up',
     description:
-      "Can't choose just one? This camp is a mix of art, science and nature—all wrapped up in a day of discovery across the museum. Perfect for kids who want to try everything at least once.",
+      "Can't choose just one? This camp is a mix of art, science and play—all wrapped up in a day of discovery across every zone at KFH. Perfect for kids who want to try everything at least once.",
   },
 ] as const;

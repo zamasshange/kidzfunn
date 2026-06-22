@@ -71,19 +71,31 @@
 	}
 
 	.mobile-header__toslide.active .mobile-navigation {
-		width: min(17.65rem, 82vw) !important;
+		width: 17.65rem !important;
+		max-width: 82vw;
 		margin-left: auto;
 	}
 
+	/* Match BADM reference — full-size nav links (do not shrink) */
 	.mobile-header__toslide .mobile-navigation #mobile-menu > li a {
-		font-size: 1.25rem !important;
-		padding: 0 1rem !important;
+		font-size: 1.6rem !important;
+		font-weight: 600 !important;
+		padding: 0 1.35rem !important;
+		line-height: 1.1em !important;
 	}
 
 	.mobile-header__hours {
-		font-size: 0.75rem;
-		line-height: 1.25;
-		padding: 0.5rem 1rem !important;
+		font-size: 0.8125rem !important;
+		font-weight: 800 !important;
+		text-transform: uppercase;
+		line-height: 1.25 !important;
+		padding: 0.625rem 1rem 0.625rem 1.5625rem !important;
+	}
+
+	.mobile-header__hours .museum-hours--compact .site-header__open-msg p {
+		font-size: 0.8125rem !important;
+		line-height: 1.25 !important;
+		margin: 0;
 	}
 }
 
@@ -200,6 +212,27 @@
 	.admission-block .ticket-price .wp-block-column:first-child .eb-text {
 		word-break: normal;
 		overflow-wrap: break-word;
+	}
+
+	/* Hours / walk-in rows are single-column — must use full width */
+	.admission-block .admission-block-right-box .ticket-price.wp-block-columns.is-layout-flex {
+		display: block !important;
+		grid-template-columns: 1fr !important;
+	}
+
+	.admission-block .admission-block-right-box .ticket-price .wp-block-column,
+	.admission-block .admission-block-right-box .ticket-price .eb-text,
+	.admission-block .admission-block-right-box .close-dates .eb-text {
+		width: 100% !important;
+		max-width: 100% !important;
+		word-break: normal !important;
+		overflow-wrap: break-word !important;
+		white-space: normal !important;
+	}
+
+	.admission-block .admission-block-left-box .ticket-price.wp-block-columns.is-layout-flex {
+		display: grid !important;
+		grid-template-columns: minmax(0, 1fr) auto !important;
 	}
 
 	.admission-block .admission-block-left-box .custom-bg-box {

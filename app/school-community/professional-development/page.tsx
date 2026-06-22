@@ -40,7 +40,7 @@ export default function ProfessionalDevelopmentPage() {
       <p>
         These offerings can be tailored based on your organization&apos;s strategic plans, and can
         range in time from 60-minute presentations to full-day or multi-day workshops held onsite at
-        the museum or your site.
+        {siteConfig.name} or your site.
       </p>
       <p>
         Please contact us at{' '}

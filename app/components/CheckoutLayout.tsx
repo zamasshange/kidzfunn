@@ -49,7 +49,7 @@ export default function CheckoutLayout({ children }: { children: ReactNode }) {
 
         <footer className="checkout-footer">
           <p>
-            <Link href="/privacy-policy/">Cape Town Discovery Museum Privacy Policy</Link>
+            <Link href="/privacy-policy/">{siteConfig.legalName} Privacy Policy</Link>
           </p>
         </footer>
       </div>

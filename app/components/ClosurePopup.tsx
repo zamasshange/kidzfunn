@@ -46,7 +46,7 @@ export default function ClosurePopup() {
                 width={640}
                 height={427}
                 src="/images/kfh/9df1a2ce9b684a88a2fd3d4a7aac7926.jpg"
-                alt="V&A Waterfront view from the museum"
+                alt={`${siteConfig.name} indoor play area`}
                 decoding="async"
               />
             </figure>

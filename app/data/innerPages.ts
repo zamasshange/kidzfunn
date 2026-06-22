@@ -189,7 +189,7 @@ export const staffDepartments = [
   {
     image:
       '/images/kfh/5297ecd2ae654e096891eff7701e1bdc.jpg',
-    title: 'Learning and Museum Experience',
+    title: 'Learning and Play Experience',
   },
   {
     image:

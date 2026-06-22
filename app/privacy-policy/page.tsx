@@ -10,10 +10,10 @@ export default function PrivacyPolicyPage() {
       imageDesktop="/images/kfh/7ba518ae4c94bb9d8025c391c61d2f3d.jpg"
     >
       <p>
-        {siteConfig.name} (&ldquo;the museum,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or
+        {siteConfig.name} (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or
         &ldquo;our&rdquo;) respects your privacy. This policy describes how we handle information
         when you visit our website, purchase tickets or membership, subscribe to our newsletter, or
-        interact with us in person at the museum.
+        visit us at our play centre.
       </p>
 
       <h2 className="wp-block-heading">Information We Collect</h2>
@@ -30,22 +30,22 @@ export default function PrivacyPolicyPage() {
       <h2 className="wp-block-heading">How We Use Information</h2>
       <ul className="wp-block-list">
         <li>Process tickets, memberships, donations, and program registrations</li>
-        <li>Send event updates, newsletters, and museum news (with your consent)</li>
-        <li>Improve our website, exhibits, and programs</li>
-        <li>Maintain a safe and welcoming museum environment</li>
+        <li>Send event updates, newsletters, and play centre news (with your consent)</li>
+        <li>Improve our website, play zones, and programs</li>
+        <li>Maintain a safe and welcoming play centre environment</li>
         <li>Comply with legal obligations</li>
       </ul>
 
       <h2 className="wp-block-heading">Sharing Information</h2>
       <p>
         We do not sell your personal information. We may share information with trusted service
-        providers who help us operate the museum, process payments, or send communications, and when
+        providers who help us operate {siteConfig.name}, process payments, or send communications, and when
         required by law.
       </p>
 
       <h2 className="wp-block-heading">Children&apos;s Privacy</h2>
       <p>
-        Our museum serves young children and their families. We collect only the minimum information
+        {siteConfig.name} serves young children and their families. We collect only the minimum information
         needed to provide services and require adult consent for memberships and registrations
         involving minors.
       </p>
@@ -64,7 +64,7 @@ export default function PrivacyPolicyPage() {
         <a href={`tel:${siteConfig.contact.phone}`}>{siteConfig.contact.phoneDisplay}</a>.
       </p>
       <p>
-        See also our <Link href="/about/policies/">Museum Policies</Link> and{' '}
+        See also our <Link href="/about/policies/">Play Centre Policies</Link> and{' '}
         <Link href="/membership/">Membership</Link> terms.
       </p>
     </ContentPage>

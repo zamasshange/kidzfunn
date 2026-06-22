@@ -31,9 +31,9 @@ export default function MuseumHours({ compact = false }: MuseumHoursProps) {
         <p>
           <strong>Open</strong> {hours.daysLabel}
           <br />
-          <strong>Museum Open</strong> {hours.museumOpen}
+          <strong>Hours</strong> {hours.openHours}
           <br />
-          <strong>Member Hour</strong> {hours.memberHour}
+          <strong>School Holidays</strong> {hours.memberHour}
         </p>
       </div>
     </div>

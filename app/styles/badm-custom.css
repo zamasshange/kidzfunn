@@ -2034,9 +2034,13 @@ width: 100%;
     display: grid;
     grid-template-columns: 9% auto!important;
 }
-.admission-block .admission-block-left-box .ticket-price, .admission-block .admission-block-right-box .ticket-price {
+.admission-block .admission-block-left-box .ticket-price {
     display: grid !important;
     grid-template-columns: 1fr 1fr;
+}
+
+.admission-block .admission-block-right-box .ticket-price {
+    display: block !important;
 }
 }
 
@@ -2061,6 +2065,11 @@ width: 100%;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.75rem 1rem;
     align-items: start;
+}
+
+.admission-block .admission-block-right-box .ticket-price.wp-block-columns.is-layout-flex {
+    display: block !important;
+    grid-template-columns: 1fr !important;
 }
 .admission-block .wp-block-media-text {
     margin-bottom: 20px;

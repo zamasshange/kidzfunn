@@ -46,12 +46,14 @@ export const siteConfig = {
 
   hours: {
     daysLabel: 'Tuesday–Saturday & Sunday',
+    openHours: 'Tue–Sat 9am–5pm, Sun 9am–4pm',
+    /** @deprecated Use openHours — kept for compatibility */
     museumOpen: 'Tue–Sat 9am–5pm, Sun 9am–4pm',
     memberHour: 'Open daily during school holidays',
-    /** Short lines for the fixed sidebar nav (matches BADM hours block format) */
+    /** Short lines for the fixed sidebar / mobile nav hours block */
     navLines: [
       { label: 'Open', text: 'Tuesday–Saturday & Sunday' },
-      { label: 'Museum Open', text: 'Tue–Sat 9am–5pm, Sun 9am–4pm' },
+      { label: 'Hours', text: 'Tue–Sat 9am–5pm, Sun 9am–4pm' },
       { label: 'Closed', text: 'Mondays · Open daily during school holidays' },
     ],
     summary: 'Open Tuesday–Saturday 9am–5pm, Sunday 9am–4pm. Closed Mondays.',

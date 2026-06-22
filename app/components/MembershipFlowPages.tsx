@@ -40,8 +40,8 @@ export function ChangeMembershipHub() {
 
       <div className="membership-flow__intro-copy">
         <p>
-          Enjoy unlimited visits, member-only hours, early access to events, and special
-          discounts—all designed to make everyday outings feel a little more magical (and a lot more
+          Enjoy unlimited playtime, member discounts, early access to events, and special
+          perks—all designed to make every visit feel a little more magical (and a lot more
           fun).
         </p>
         <p>
@@ -60,7 +60,7 @@ export function ChangeMembershipHub() {
                 <h2 className="membership-change-card__tier">{formatTierLabel(plan.tier)}</h2>
                 <p className="membership-change-card__description">
                   {detail?.description ??
-                    `Membership for ${plan.people.toLowerCase()} with a full year of museum access and member benefits.`}
+                    `Membership for ${plan.people.toLowerCase()} with a full year of play centre access and member benefits.`}
                 </p>
               </div>
               <div className="membership-change-card__actions">

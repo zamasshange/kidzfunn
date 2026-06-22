@@ -105,7 +105,7 @@ export const tryItTruckSection: WorkshopSection = {
       content: (
         <>
           <p>
-            The scholarship rate is {formatZAR(18900)}/visit. Scholarships are reserved for Title-1 and other
+            The scholarship rate is {formatZAR(18900)}/visit. Scholarships are reserved for low-income and other
             schools and organizations that serve communities with large populations of low-income
             families (40% or higher).
           </p>
@@ -210,7 +210,7 @@ export const prekTkSection: WorkshopSection = {
       content: (
         <p>
           <strong>Scholarships: </strong>The scholarship rate is {formatZAR(6300)}/workshop. Scholarships are
-          reserved for Title-1 and other schools and organizations that serve communities with large
+          reserved for low-income and other schools and organizations that serve communities with large
           populations of low-income families (40% or higher). For all questions regarding financial
           aid, please contact us at{' '}
           <a href={`mailto:${siteConfig.contact.schoolVisitsEmail}`}>{siteConfig.contact.schoolVisitsEmail}</a>.
@@ -229,7 +229,7 @@ export const prekTkSection: WorkshopSection = {
           </p>
           <p>
             <strong>TK Fairy Tale Engineering: </strong>Student engineers practice {siteConfig.locale.region}
-            Discovery Museum&apos;s <a href={THINK_MAKE_TRY}>Think, Make, Try®</a> engineering design
+            {siteConfig.name}&apos;s <a href={THINK_MAKE_TRY}>Think, Make, Try®</a> engineering design
             process as they work collaboratively to solve problems for their fairytale friends.
           </p>
         </>
@@ -301,7 +301,7 @@ export const k3rdSection: WorkshopSection = {
       summary: 'Scholarships',
       content: (
         <p>
-          The scholarship rate is {formatZAR(6300)}/workshop. Scholarships are reserved for Title-1 and other
+          The scholarship rate is {formatZAR(6300)}/workshop. Scholarships are reserved for low-income and other
           schools and organizations that serve communities with large populations of low-income
           families (40% or higher). For all questions regarding financial aid, please contact us
           at&nbsp;
@@ -314,8 +314,8 @@ export const k3rdSection: WorkshopSection = {
       content: (
         <>
           <p>
-            <strong>Fairy Tale Engineering:</strong> Student engineers practice {siteConfig.name}
-            Museum&apos;s <a href={THINK_MAKE_TRY}>Think, Make, Try®</a> engineering design process
+            <strong>Fairy Tale Engineering:</strong> Student engineers practice {siteConfig.name}&apos;s{' '}
+            <a href={THINK_MAKE_TRY}>Think, Make, Try®</a> engineering design process
             as they work collaboratively to solve problems for their fairytale friends.
           </p>
           <p>

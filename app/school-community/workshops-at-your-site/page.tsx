@@ -15,8 +15,8 @@ import {
 export default function WorkshopsAtYourSitePage() {
   return (
     <InnerPageShell
-      title="Bring the Museum to You!"
-      description={`You don't need to visit the museum to experience the benefits of our research-backed, playful programming. Our Try It Truck and STEAM Workshops at Your Site make it fun and easy to support STEAM-learning in schools and communities throughout ${siteConfig.locale.region}!`}
+      title="Bring KFH to You!"
+      description={`You don't need to visit ${siteConfig.name} to experience the benefits of our playful, hands-on programming. Our STEAM workshops at your school or site make it fun and easy to support learning throughout ${siteConfig.locale.region}!`}
       desktopImage={kfhImages.comePlay}
       mobileImage={kfhImages.playZones}
       jumpNav={[

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { siteConfig } from '../lib/siteConfig';
 
 export type DiscoveryCircleTier = {
@@ -9,79 +8,52 @@ export type DiscoveryCircleTier = {
   footnote?: string;
 };
 
+/** Loyalty supporter tiers — used on give / loyalty pages */
 export const discoveryCircleTiers: DiscoveryCircleTier[] = [
   {
-    id: 'thinker',
-    summary: 'Thinker Circle – R 18 000 – R 44 000',
-    headline: 'Funds a visit to the museum for 20 preschoolers from low-income communities.',
+    id: 'friend',
+    summary: 'Friend Circle – R 2 500 – R 5 000',
+    headline: 'Helps fund a morning of play for children from local community groups.',
     benefits: [
-      'Core membership benefits',
-      'Free family admission with up to six guests per visit, plus six family guest passes',
-      'Easy and unlimited caregiver changes',
-      'Invitations to special Discovery Circle events throughout the year',
-      'First registration for camps, classes and museum events',
-      'R 1 800 off birthday parties',
-      'Personal point of contact dedicated to your museum experience',
-      'Recognition on annual impact report and donor wall',
-      'Free family admission to signature museum events',
+      'Recognition on our annual thank-you board',
+      'Invitations to seasonal celebrations at KFH',
+      'First notice of promotions and special events',
+      'Complimentary loyalty programme enrolment',
     ],
-    footnote: '*Free family admission limited to 6 people in a household',
   },
   {
-    id: 'explorer',
-    summary: 'Explorer Circle – R 44 000 – R 90 000',
-    headline: 'Supports professional development for 30 early childhood educators.',
+    id: 'playmaker',
+    summary: 'Playmaker Circle – R 5 000 – R 15 000',
+    headline: 'Supports party bundles for families who need a little extra help celebrating.',
     benefits: [
-      'Core membership benefits',
-      'Free family admission with up to six guests per visit, plus six family guest passes',
-      'Easy and unlimited caregiver changes',
-      'Invitations to special Discovery Circle events throughout the year',
-      'First registration for camps, classes and museum events',
-      'R 1 800 off birthday parties',
-      'Personal point of contact dedicated to your museum experience',
-      'Recognition on annual impact report and donor wall',
-      'Free family admission to signature museum events and seasonal celebrations',
+      'All Friend Circle benefits',
+      'Discount on your next party booking',
+      'Priority booking for peak party dates',
+      'Personal thank-you from the KFH team',
     ],
-    footnote: '*Free family admission limited to 6 people in a household',
   },
   {
-    id: 'creativity',
-    summary: 'Creativity Circle – R 90 000 – R 180 000',
-    headline: 'Helps 3 high-need elementary classes experience our STEAM workshops.',
+    id: 'champion',
+    summary: 'Champion Circle – R 15 000 – R 50 000',
+    headline: 'Helps maintain and refresh play zones so every visit feels new and exciting.',
     benefits: [
-      'Core membership benefits',
-      'Free family admission with up to six guests per visit, plus six family guest passes',
-      'Easy and unlimited caregiver changes',
-      'Invitations to special Discovery Circle events throughout the year',
-      'First registration for camps, classes and museum events',
-      'R 1 800 off birthday parties',
-      'Personal point of contact dedicated to your museum experience',
-      'Recognition on annual impact report and donor wall',
-      'Free family admission to signature museum events and seasonal celebrations',
-      'Invitation to a private event showcasing the museum\'s educational philosophy and research',
+      'All Playmaker Circle benefits',
+      'Name listed on our supporter wall at the play centre',
+      'Invitation to a private family preview of new activities',
+      'Annual family membership included',
     ],
-    footnote: '*Free family admission limited to 6 people in a household',
   },
   {
-    id: 'builder',
-    summary: 'Builder Circle – R 180 000+',
-    headline: 'Provides a year of early STEAM learning to 3 preschool classes of low-income families.',
+    id: 'legend',
+    summary: 'Legend Circle – R 50 000+',
+    headline: 'Makes a lasting difference for families across Gauteng who love to play together.',
     benefits: [
-      'Core membership benefits',
-      'Free family admission with up to six guests per visit, plus six family guest passes',
-      'Easy and unlimited caregiver changes',
-      'Invitations to special Discovery Circle events throughout the year',
-      'First registration for camps, classes and museum events',
-      'R 1 800 off birthday parties',
-      'Personal point of contact dedicated to your museum experience',
-      'Recognition on annual impact report and donor wall',
-      'Free family admission to signature museum events and seasonal celebrations',
-      'Invitation to a private event showcasing the museum\'s educational philosophy and research',
-      'Complimentary commemorative tile celebrating our waterfront campus',
+      'All Champion Circle benefits',
+      'Dedicated point of contact for bookings and events',
+      'Complimentary venue hire for one community celebration per year',
+      'Featured recognition across KFH communications',
     ],
-    footnote:
-      '*Free family admission limited to 6 people in a household. Additional commemorative tiles available with a gift of R 27 000 each.',
   },
 ];
 
-export const discoveryCircleContactEmail = 'discoverycircle@ctdiscovery.co.za';
+export const discoveryCircleContactEmail = siteConfig.contact.email;

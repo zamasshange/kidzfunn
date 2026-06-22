@@ -14,8 +14,8 @@ export default function ProgramsPage() {
       <WpGridSection className="page-camps-grid">
         <p>
           Give your kids a break from the ordinary with our playful, adventure-packed camps! From
-          STEAM projects to hidden grottos, children ages 3-8 explore, create, and make new friends
-          across our waterfront campus at {siteConfig.locale.landmark}. Every day brings new
+          STEAM projects to hidden grottos, children ages 3–12 explore, create, and make new friends
+          across our indoor play centre in {siteConfig.locale.landmark}. Every day brings new
           discoveries, pure joy and lifelong memories!
         </p>
 

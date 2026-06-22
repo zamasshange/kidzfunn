@@ -3,7 +3,7 @@ import ContentPage from '../components/ContentPage';
 
 const links = [
   { href: '/school-community/workshops-at-your-site/', label: 'Programs at Your Site' },
-  { href: '/school-community/workshops-at-the-museum/', label: 'Field Trips' },
+  { href: '/school-community/workshops-at-the-museum/', label: 'School Outings' },
   { href: '/school-community/resources/', label: 'Educator Resources' },
   { href: '/school-community/professional-development/', label: 'Professional Development' },
 ];

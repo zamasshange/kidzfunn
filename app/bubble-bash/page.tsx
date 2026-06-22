@@ -29,8 +29,8 @@ export default function BubbleBashPage() {
           <li>Adults: Free</li>
         </ul>
         <p>
-          <strong>Museum Open</strong> 10AM – 4PM, Wednesday thru Monday ·{' '}
-          <strong>Member Hour</strong> 9 – 10AM
+          <strong>Hours</strong> {siteConfig.hours.openHours} ·{' '}
+          <strong>Closed</strong> Mondays
         </p>
         <p>
           <strong>Bubble Bash Pauses for Pride on June 20.</strong> Programming will be different
