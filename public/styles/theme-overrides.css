@@ -45,9 +45,30 @@ html.fp-enabled body {
 .vertical-slider .fp-section.box.active .cover-img,
 .vertical-slider .fp-section.box.active .vertical-slider__text,
 .vertical-slider .fp-section.box.active .testimonial-item,
-.vertical-slider .fp-section.box.active .testimonial-box {
+.	vertical-slider .fp-section.box.active .testimonial-box {
 	opacity: 1 !important;
 	visibility: visible !important;
+}
+
+/* Homepage slider footer — compact column on mobile and desktop */
+body.home .vertical-slider .section.fp-auto-height-responsive .site-footer {
+	height: auto !important;
+	min-height: 0 !important;
+	max-height: none !important;
+	justify-content: flex-start !important;
+}
+
+body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__main {
+	padding: 0 !important;
+}
+
+body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__top {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__subfooter {
+	margin-top: 0 !important;
 }
 
 .site-footer__main a,
@@ -358,39 +379,30 @@ html.fp-enabled body {
 		pointer-events: none !important;
 	}
 
-	/* Footer slide — fill viewport like BADM reference */
+	/* Footer slide — compact stack, no forced vertical spread */
 	body.home .vertical-slider .badm-slider-track > .section.fp-auto-height-responsive {
 		display: flex;
 		flex-direction: column;
+		justify-content: flex-start;
+		align-items: stretch;
 	}
 
-	body.home.slider-on-footer .vertical-slider .section.fp-auto-height-responsive .site-footer,
-	body.home .vertical-slider .section.fp-auto-height-responsive.is-active .site-footer {
-		flex: 1 1 auto;
-		width: 100%;
-		height: 100% !important;
-		min-height: 100% !important;
-		max-height: 100%;
-		justify-content: space-between !important;
+	body.home .vertical-slider .section.fp-auto-height-responsive .site-footer {
 		padding-top: 4.75rem !important;
-		padding-bottom: 1.25rem !important;
-		box-sizing: border-box;
-		overflow: hidden;
+		padding-bottom: 0 !important;
 	}
 
-	body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__main {
-		flex: 0 0 auto;
-		padding: 0.5rem 0 0 !important;
+	body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__brand-name {
+		font-size: 1.25rem;
+		line-height: 1.25;
 	}
 
-	body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__top {
-		gap: 1rem;
+	body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__contact-info {
+		margin-top: 0.5rem;
 	}
 
-	body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__subfooter {
-		margin-top: auto !important;
-		flex-shrink: 0;
-		padding-bottom: 0.25rem;
+	body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__ctas {
+		margin-top: 0.25rem;
 	}
 
 	/* Hide testimonial cards — reference shows headline + CTA only */

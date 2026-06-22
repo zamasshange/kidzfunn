@@ -609,55 +609,79 @@ html.fp-enabled body.home #fullpage.badm-scroll-slider {
    Override so it can grow to its natural height on mobile.
    ============================================================ */
 .vertical-slider .site-footer {
-	height: 100%;
-	min-height: 100%;
+	height: auto;
+	min-height: 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between !important;
+	justify-content: flex-start !important;
 	padding-top: 0 !important;
-	padding-bottom: 2.5rem;
+	padding-bottom: 2rem;
 	background-size: cover;
 	background-position: center;
 	box-sizing: border-box;
+}
+
+/* Homepage slider footer — single compact column (matches BADM reference) */
+body.home .vertical-slider .section.fp-auto-height-responsive .site-footer {
+	flex: 0 0 auto;
+	width: 100%;
+	height: auto !important;
+	min-height: 0 !important;
+	max-height: none !important;
+	justify-content: flex-start !important;
+	overflow: visible;
+}
+
+body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__main {
+	flex: 0 0 auto;
+	padding: 0 !important;
+}
+
+body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__top {
+	gap: 1.125rem;
+	padding-bottom: 1.25rem;
+	margin-bottom: 0;
+	border-bottom: none;
+}
+
+body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__subfooter {
+	margin-top: 0 !important;
+	padding: 0.75rem 0 1.5rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 @media (min-width: 1024px) {
 	.vertical-slider .site-footer {
 		background-size: cover;
 		background-position: center;
+		padding-top: 5.5rem !important;
+		padding-bottom: 2.5rem !important;
+	}
+
+	body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__top {
+		flex-direction: row;
+		align-items: flex-start;
+		gap: 2rem;
+		padding-bottom: 1.5rem;
+	}
+
+	body.home .vertical-slider .section.fp-auto-height-responsive .site-footer__ctas {
+		margin-left: auto;
+		align-self: center;
 	}
 }
 
 @media (max-width: 1023px) {
 	.vertical-slider .site-footer {
-		justify-content: space-between !important;
 		padding-top: 4.75rem !important;
-		padding-bottom: 1.25rem !important;
-		height: 100% !important;
-		min-height: 100% !important;
-		box-sizing: border-box;
+		padding-bottom: 0 !important;
 	}
 
 	.vertical-slider .badm-slider-track > .section.fp-auto-height-responsive {
 		display: flex;
 		flex-direction: column;
-	}
-
-	.vertical-slider .section.fp-auto-height-responsive > .site-footer {
-		flex: 1 1 auto;
-		width: 100%;
-	}
-
-	.vertical-slider .section.fp-auto-height-responsive .site-footer__main {
-		flex: 0 0 auto;
-		padding-top: 0 !important;
-		padding-bottom: 0 !important;
-	}
-
-	.vertical-slider .section.fp-auto-height-responsive .site-footer__subfooter {
-		margin-top: auto !important;
-		flex-shrink: 0;
-		padding-bottom: 0.25rem;
+		justify-content: flex-start;
+		align-items: stretch;
 	}
 }
 
