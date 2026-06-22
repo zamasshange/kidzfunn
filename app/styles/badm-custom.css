@@ -348,8 +348,9 @@ li#menu-item-845:hover {
 		display: none;
 	}
 	.vertical-slider__text {
-		padding: 80px 50px 35px;
-		height: 190px;
+		padding: 80px 50px 48px;
+		height: auto;
+		min-height: 13rem;
 	}
 	.testimonial-box-item span {
 		font-size: 14px;
@@ -557,6 +558,12 @@ html.fp-enabled body.home #fullpage.badm-scroll-slider {
 	overflow: hidden;
 }
 
+@media (max-width: 1023px) {
+	.home .badm-scroll-slider .badm-slider-track > .section.box {
+		overflow: visible;
+	}
+}
+
 .badm-scroll-slider .badm-slider-track > .section.fp-auto-height-responsive {
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -622,9 +629,19 @@ html.fp-enabled body.home #fullpage.badm-scroll-slider {
 
 @media (max-width: 1023px) {
 	.vertical-slider .site-footer {
-		justify-content: flex-start !important;
-		padding-top: 48px !important;
-		padding-bottom: 32px !important;
+		justify-content: space-between !important;
+		padding-top: 4.5rem !important;
+		padding-bottom: 1.5rem !important;
+	}
+
+	.vertical-slider .section.fp-auto-height-responsive .site-footer__main {
+		flex: 0 0 auto;
+	}
+
+	.vertical-slider .section.fp-auto-height-responsive .site-footer__subfooter {
+		margin-top: auto;
+		flex-shrink: 0;
+		padding-bottom: 0.5rem;
 	}
 }
 

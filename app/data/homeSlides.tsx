@@ -26,7 +26,7 @@ export const homeSlides: HomeSlide[] = [
         Welcome to <br /> Kidz Fun House!
       </>
     ),
-    ctaText: 'Your favourite indoor playground and party venue',
+    ctaText: 'Plan Your Visit!',
     ctaHref: '/plan-your-visit/',
     testimonial: {
       text: '“KFH is the biggest indoor playground and party venue in Johannesburg.”',
@@ -39,7 +39,7 @@ export const homeSlides: HomeSlide[] = [
     desktopImage: kfhHomeSlides[1],
     alt: 'Pirate ship play structure at Kidz Fun House',
     heading: 'Come Play!',
-    ctaText: 'Open Tuesday–Saturday 9am–5pm, Sunday 9am–4pm.',
+    ctaText: 'View Opening Hours!',
     ctaHref: '/plan-your-visit/',
     testimonial: {
       text: '“We work on a walk-in basis and only need bookings for birthdays or large groups.”',
@@ -56,7 +56,7 @@ export const homeSlides: HomeSlide[] = [
         Party <br /> Bundles!
       </>
     ),
-    ctaText: 'Save 50% on party bundles Tuesday to Friday!',
+    ctaText: 'View Party Bundles!',
     ctaHref: '/summer-birthdays/',
     testimonial: {
       text: '“Let us create your kiddo’s dream birthday bash.”',
@@ -69,7 +69,7 @@ export const homeSlides: HomeSlide[] = [
     desktopImage: kfhHomeSlides[3],
     alt: 'Giant pirate-themed jungle gym at Kidz Fun House',
     heading: 'Play Zones',
-    ctaText: 'Over 8 different play zones for ages 5 months to 12 years',
+    ctaText: 'Explore All Zones!',
     ctaHref: '/discovery-zones/',
     testimonial: {
       text: '“A wonderland for kids and an oasis for parents.”',
@@ -82,7 +82,7 @@ export const homeSlides: HomeSlide[] = [
     desktopImage: kfhHomeSlides[4],
     alt: 'KFH arcade and loyalty program',
     heading: 'Loyalty Program',
-    ctaText: 'Join our loyalty program and get more benefits!',
+    ctaText: 'Learn More!',
     ctaHref: '/membership/',
     testimonial: {
       text: '“Free play on your birthday — a small token of appreciation from the KFH team.”',

@@ -349,6 +349,19 @@ html.fp-enabled body {
 		display: none !important;
 	}
 
+	/* Hide announcement once user scrolls past the first slide */
+	body.slider-past-first .home #fullpage .featured-classes-wrap {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: opacity 0.35s ease, visibility 0.35s ease;
+	}
+
+	/* Footer slide: content fills viewport, subfooter pinned to bottom */
+	body.slider-on-footer .vertical-slider .section.fp-auto-height-responsive .site-footer {
+		padding-top: 4.5rem !important;
+	}
+
 	/* Hide testimonial cards — reference shows headline + CTA only */
 	.home .testimonial-item {
 		display: none !important;
@@ -367,12 +380,22 @@ html.fp-enabled body {
 
 	.home .vertical-slider__text {
 		z-index: 95;
+		height: auto !important;
+		min-height: 12.5rem;
+		padding-bottom: 2.25rem !important;
+		overflow: visible;
+		box-sizing: border-box;
 	}
 
 	.home .vertical-slider__heading {
-		font-size: 2rem;
-		line-height: 1.05;
-		max-width: calc(100% - 2.5rem);
+		font-size: clamp(1.5rem, 5.5vw, 2rem);
+		line-height: 1.1;
+		max-width: 72%;
+		margin-bottom: 0.5rem;
+	}
+
+	.home .vertical-slider__cta {
+		max-width: 72%;
 	}
 
 	.home .vertical-slider__cta a.vertical-slider__button {
@@ -381,6 +404,9 @@ html.fp-enabled body {
 		display: inline-flex;
 		align-items: center;
 		gap: 0.35rem;
+		white-space: normal;
+		overflow-wrap: break-word;
+		max-width: 100%;
 	}
 
 	/* Left slide dots + sun icon (fp-nav injected by slider JS) */
@@ -394,19 +420,36 @@ html.fp-enabled body {
 }
 
 @media (max-width: 430px) {
-	.home .vertical-slider__heading {
-		font-size: 1.875rem;
-	}
-
 	.home .vertical-slider__heading br {
 		display: none;
 	}
 
 	.home .vertical-slider__text {
-		padding: 5rem 2.5rem 2rem 3.125rem;
+		height: auto !important;
+		min-height: 14rem;
+		padding: 4.25rem 2rem 2.5rem 3rem;
+		overflow: visible;
+	}
+
+	.home .vertical-slider__heading {
+		font-size: clamp(1.375rem, 5vw, 1.875rem);
+		line-height: 1.12;
+	}
+
+	.home .vertical-slider__heading,
+	.home .vertical-slider__cta {
+		max-width: 70%;
 	}
 
 	.home .vertical-slider__cta a.vertical-slider__button {
-		font-size: 0.875rem;
+		font-size: 0.8125rem;
+		line-height: 1.35;
+		white-space: normal;
+		word-break: normal;
+		overflow-wrap: break-word;
+		display: inline-flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		max-width: 100%;
 	}
 }

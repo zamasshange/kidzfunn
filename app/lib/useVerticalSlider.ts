@@ -106,6 +106,9 @@ export function useVerticalSlider(containerId = 'fullpage') {
         nav.classList.remove('last-slide');
       }
 
+      document.body.classList.toggle('slider-past-first', index > 0);
+      document.body.classList.toggle('slider-on-footer', index === sections.length - 1);
+
       sections.forEach((section, i) => {
         const isCurrent = i === index;
         section.classList.toggle('is-active', isCurrent);
@@ -290,7 +293,7 @@ export function useVerticalSlider(containerId = 'fullpage') {
       slider.removeEventListener('touchend', onTouchEnd);
 
       document.documentElement.classList.remove('fp-enabled');
-      document.body.classList.remove('fp-enabled', 'stick');
+      document.body.classList.remove('fp-enabled', 'stick', 'slider-past-first', 'slider-on-footer');
 
       slider.style.removeProperty('--slide-h');
       container.style.removeProperty('--slide-h');
