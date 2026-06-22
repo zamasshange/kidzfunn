@@ -1,0 +1,295 @@
+/* Loaded after remote theme CSS — fixes cascade conflicts */
+
+/* KFH content photos — full-resolution covers (layout unchanged) */
+.hero__image {
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+}
+
+.vertical-slider .section.box picture .cover-img,
+.hero picture .cover-img,
+.page-tile-grid .wp-block-image img,
+.page-tile-grid img {
+	object-fit: cover;
+	object-position: center center;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	max-width: none;
+	image-rendering: auto;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform: translateZ(0);
+}
+
+html.fp-enabled,
+html.fp-enabled body {
+	overflow-x: hidden;
+	max-width: 100vw;
+}
+
+.vertical-slider {
+	width: 100% !important;
+	max-width: 100vw;
+}
+
+/* Theme sets every .fp-section.box image to opacity:1 — override here (loads last) */
+.vertical-slider .fp-section.box:not(.active) .cover-img,
+.vertical-slider .fp-section.box:not(.active) .vertical-slider__text,
+.vertical-slider .fp-section.box:not(.active) .testimonial-item,
+.vertical-slider .fp-section.box:not(.active) .testimonial-box {
+	opacity: 0 !important;
+	visibility: hidden !important;
+}
+
+.vertical-slider .fp-section.box.active .cover-img,
+.vertical-slider .fp-section.box.active .vertical-slider__text,
+.vertical-slider .fp-section.box.active .testimonial-item,
+.vertical-slider .fp-section.box.active .testimonial-box {
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+.site-footer__main a,
+.site-footer__subfooter a,
+.site-footer__links a,
+.site-footer__contact-row a,
+.site-footer__copyright a,
+.site-footer__cta,
+.site-footer__cta:visited {
+	color: #ffffff !important;
+}
+
+.site-footer__cta--primary,
+.site-footer__cta--primary:visited,
+.site-footer__cta--primary:hover {
+	color: #ffffff !important;
+}
+
+.site-footer__cta--secondary,
+.site-footer__cta--secondary:visited {
+	color: #ffffff !important;
+	border-color: #ffffff !important;
+}
+
+.site-footer__cta--secondary:hover {
+	color: #348888 !important;
+	background: #ffffff !important;
+}
+
+.site-footer__brand-name,
+.site-footer__col-heading,
+.site-footer__links li,
+.site-footer__text,
+.site-footer__copyright,
+.site-footer__copyright p,
+.site-footer__social-label {
+	color: #ffffff !important;
+}
+
+.site-footer__icons a {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+}
+
+.custom-logo,
+.mobile-header__logo .custom-logo {
+	max-height: 87px;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+}
+
+/* Desktop: keep all main content clear of the fixed right nav (18.75rem) */
+@media only screen and (min-width: 1024px) {
+	.site-main > .hero,
+	.site-main > .wp-block-group,
+	.site-main > .wp-block-cover,
+	.site-main > section.wp-block-group {
+		width: calc(100% - 250px) !important;
+		max-width: calc(100% - 250px) !important;
+		box-sizing: border-box;
+	}
+
+	.site-main .wp-block-group__inner-container {
+		max-width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+/* Prevent text clipping in content columns site-wide */
+.site-main .wp-block-column,
+.site-main .wp-block-group__inner-container,
+.site-main .eb-text,
+.site-main .admission-block-right-box,
+.site-main .admission-block-left-box {
+	overflow-wrap: break-word;
+	word-break: break-word;
+	min-width: 0;
+	max-width: 100%;
+}
+
+.site-main p,
+.site-main li {
+	overflow-wrap: break-word;
+	word-break: break-word;
+}
+
+/* Tile grids: force 2-column rows like live discovery zones / events pages */
+.page-tile-grid .wp-block-columns.is-layout-flex {
+	display: flex !important;
+	flex-wrap: nowrap !important;
+	gap: 2em;
+	align-items: flex-start;
+}
+
+.page-tile-grid .wp-block-columns.is-layout-flex > .wp-block-column {
+	flex: 1 1 0 !important;
+	flex-grow: 1 !important;
+	min-width: 0;
+	width: auto !important;
+}
+
+.page-tile-grid .wp-block-columns + .wp-block-columns {
+	margin-top: 2em;
+}
+
+.page-tile-grid .wp-block-column h3.wp-block-heading,
+.page-tile-grid .wp-block-column p {
+	overflow-wrap: break-word;
+	word-break: break-word;
+	hyphens: auto;
+	max-width: 100%;
+}
+
+@media (max-width: 781px) {
+	.page-tile-grid .wp-block-columns.is-layout-flex {
+		flex-wrap: wrap !important;
+	}
+
+	.page-tile-grid .wp-block-columns.is-layout-flex > .wp-block-column {
+		flex: 1 1 100% !important;
+	}
+}
+
+/* Sidebar nav: compact hours copy — inherit reference typography from utility block */
+.site-header__hours .museum-hours--compact .site-header__open-msg p,
+.mobile-header__hours .museum-hours--compact .site-header__open-msg p {
+	line-height: 1.2;
+	margin: 0;
+	font-weight: 800;
+}
+
+.site-header__utility .site-header__hours {
+	margin-bottom: 0;
+}
+
+.site-header__utility hr {
+	margin: 0.9375rem auto;
+}
+
+/* Desktop sidebar — logo overlap + fit all flat nav items */
+@media only screen and (min-width: 1024px) {
+	.site-header {
+		font-family: 'Modulus Pro', sans-serif !important;
+	}
+
+	.site-header__branding {
+		position: absolute !important;
+		top: 0 !important;
+		right: 0 !important;
+		width: 20.9375rem !important;
+		height: 0 !important;
+		overflow: visible !important;
+		z-index: 120 !important;
+		filter: drop-shadow(-1px 6px 3px rgb(0 0 0 / 0.1)) !important;
+		pointer-events: none;
+	}
+
+	.site-header__logo-clip {
+		background-color: #fff !important;
+		clip-path: path('M50.4066 69.8814L27.9042 0H361.794V144.571L131.136 132.102C93.9339 130.091 61.826 105.345 50.4066 69.8814Z') !important;
+		pointer-events: auto;
+	}
+
+	.site-header__branding .custom-logo {
+		max-height: 87px !important;
+		width: auto !important;
+	}
+
+	.main-navigation {
+		z-index: 100 !important;
+	}
+
+	.site-header,
+	.main-navigation,
+	.main-navigation .clip {
+		height: 100dvh !important;
+		max-height: 100dvh !important;
+	}
+
+	.main-navigation .clip {
+		display: flex !important;
+		flex-direction: column !important;
+	}
+
+	.site-header__utility {
+		padding-top: 10.3125rem !important;
+		font-size: 1.125rem !important;
+		font-weight: 800 !important;
+		flex-shrink: 0 !important;
+	}
+
+	.site-header__hours .museum-hours--compact .site-header__open-msg p {
+		font-size: 1.125rem !important;
+		line-height: 1.2 !important;
+	}
+
+	.main-navigation li:first-child > a,
+	.main-navigation li#menu-item-3498:nth-child(2) a {
+		height: 4rem !important;
+		min-height: 4rem !important;
+	}
+
+	.main-navigation a {
+		font-size: 1.6rem !important;
+		font-weight: 800 !important;
+		line-height: 1.1em !important;
+	}
+
+	.main-navigation ul .sub-menu {
+		display: none !important;
+	}
+
+	.menu-top-navigation-container {
+		flex: 1 1 auto !important;
+		min-height: 0 !important;
+		display: flex !important;
+		flex-direction: column !important;
+	}
+
+	.main-navigation ul.nav-menu {
+		display: flex !important;
+		flex-direction: column !important;
+		flex: 1 1 auto !important;
+		min-height: 0 !important;
+		height: 100% !important;
+	}
+
+	.main-navigation ul.nav-menu > li {
+		flex-grow: 1 !important;
+		flex-shrink: 1 !important;
+		min-height: 0 !important;
+	}
+
+	.main-navigation ul.nav-menu > li:first-child,
+	.main-navigation ul.nav-menu > li#menu-item-3498:nth-child(2) {
+		flex-grow: 0 !important;
+		flex-shrink: 0 !important;
+	}
+
+	.main-navigation ul.nav-menu > li > a {
+		white-space: nowrap !important;
+	}
+}

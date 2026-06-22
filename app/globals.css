@@ -1,0 +1,203 @@
+/* Minimal resets — main styling comes from the WordPress theme CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Fredoka', sans-serif;
+}
+
+.site-title,
+.site-description {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+}
+
+/* Homepage announcement bar — extracted from live site inline styles */
+.featured-classes-wrap {
+  position: relative;
+  z-index: 10;
+  height: 0;
+  overflow: visible;
+}
+
+.featured-classes-wrap svg {
+  opacity: 0.9;
+}
+
+.featured-classes-bar {
+  font-size: 15px;
+  font-weight: 500;
+  width: 100%;
+  position: absolute;
+  height: fit-content;
+  top: 0;
+  left: -18em;
+  z-index: 9999;
+  display: inline-flex;
+  justify-content: flex-end;
+}
+
+@media (min-width: 1024px) {
+  .featured-classes-bar {
+    padding-right: 10px;
+  }
+}
+
+.featured-classes-content {
+  padding: 13px 30px 13px 15px;
+  background: #ffffffe5;
+}
+
+.featured-classes-content a {
+  color: #e89140;
+}
+
+@media (max-width: 1023px) {
+  .featured-classes-bar {
+    top: 18px;
+    left: auto;
+  }
+
+  .featured-classes-bar span.sep {
+    display: none;
+  }
+
+  .featured-classes-bar span.fci {
+    display: inline-block;
+  }
+
+  .featured-classes-content {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .featured-classes-bar {
+    top: 65px;
+    left: 0 !important;
+    width: 100%;
+    right: 0;
+  }
+
+  .featured-classes-content {
+    flex: 1;
+  }
+}
+
+@media (max-width: 440px) {
+  .featured-classes-content {
+    font-size: 11px;
+    padding: 8px 0;
+  }
+
+  .featured-classes-svg {
+    background: url(https://bayareadiscoverymuseum.org/wp-content/uploads/2025/11/announce-round.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    opacity: 0.9;
+  }
+
+  .featured-classes-svg svg {
+    opacity: 0 !important;
+  }
+}
+
+/* Hero images must bleed edge-to-edge (live site has no top gap) */
+.hero__copy {
+  position: relative;
+}
+
+.hero__images {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__image--desktop,
+.hero__image--mobile {
+  position: absolute;
+  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.home .site-main,
+.home #primary {
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden;
+}
+
+/* Homepage slide color-drop transition (matches WP dropEffect) */
+#badm-drop-effect {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+#badm-drop-effect.drop-effect--active {
+  transform: translateY(0);
+}
+
+#badm-drop-effect.drop-effect--out {
+  transform: translateY(100%);
+}
+
+/* Desktop nav: expand parent row and reveal sub-links on hover */
+@media only screen and (min-width: 1024px) {
+  .main-navigation #primary-menu > .menu-item-has-children.is-expanded,
+  .main-navigation li.menu-item-has-children:hover {
+    flex-grow: 0;
+  }
+
+  .main-navigation ul .sub-menu {
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .main-navigation ul .sub-menu.visible,
+  .main-navigation li.menu-item-has-children.is-expanded > .sub-menu,
+  .main-navigation li.menu-item-has-children:hover > .sub-menu {
+    opacity: 1 !important;
+    max-height: 999px !important;
+    padding-top: 0.25rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .main-navigation ul .sub-menu li {
+    width: 100%;
+  }
+
+  .main-navigation ul .sub-menu a {
+    font-weight: 500;
+    font-size: 1.25rem;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    text-transform: lowercase;
+  }
+}
+
+.pum-open {
+  visibility: visible;
+}

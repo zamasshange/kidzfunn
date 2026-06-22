@@ -1,0 +1,105 @@
+/* Discovery zones, events, camps tile grids — matches live site tile pages */
+.page-tile-grid .wp-block-columns.is-layout-flex {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 2em;
+  align-items: flex-start;
+}
+
+.page-tile-grid .wp-block-columns.is-layout-flex > .wp-block-column {
+  flex: 1 1 0 !important;
+  flex-grow: 1 !important;
+  min-width: 0;
+  width: auto !important;
+}
+
+.page-tile-grid .wp-block-columns + .wp-block-columns {
+  margin-top: 2em;
+}
+
+@media (max-width: 781px) {
+  .page-tile-grid .wp-block-columns.is-layout-flex {
+    flex-wrap: wrap !important;
+  }
+
+  .page-tile-grid .wp-block-columns.is-layout-flex > .wp-block-column {
+    flex: 1 1 100% !important;
+  }
+}
+
+.page-tile-grid .wp-block-column h3.wp-block-heading {
+  color: #008080;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+.page-tile-grid .wp-block-column p,
+.page-tile-grid .wp-block-column {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.page-tile-grid .wp-block-image.is-style-shape-angle img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-tile-grid .wp-block-spacer {
+  display: block;
+}
+
+/* Camps: image + orange button below (no title on tile) */
+.page-camps-grid .wp-block-button__link {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.birthday-tabs__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  border-bottom: 2px solid #2cbcbd;
+}
+
+.birthday-tabs__nav li {
+  margin: 0;
+}
+
+.birthday-tabs__nav button {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: #0f3495;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin-bottom: -2px;
+  padding: 0.75rem 1.25rem;
+  text-transform: capitalize;
+}
+
+.birthday-tabs__nav button.active {
+  border-bottom-color: #fa7f08;
+  color: #000;
+}
+
+.birthday-tabs__panel img {
+  height: auto;
+  max-width: 100%;
+}
+
+.board-list-columns .wp-block-list {
+  margin-top: 0;
+}

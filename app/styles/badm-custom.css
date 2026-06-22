@@ -1,0 +1,2097 @@
+/* Homepage announcement bar */
+
+
+/* Homepage testimonials */
+.testimonial-item {
+	position: absolute;
+	inset: auto 0 0;
+	width: 100%;
+	pointer-events: none;
+	z-index: 50;
+}
+
+.testimonial-box {
+	position: absolute;
+	bottom: 0;
+	left: 500px;
+	width: 700px;
+	height: 220px;
+	background-image: url(https://bayareadiscoverymuseum.org/wp-content/uploads/2025/09/testimonialLayer.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top right;
+	pointer-events: auto;
+}
+
+.testimonial-box-item {
+	width: 550px;
+	flex-direction: column;
+	align-items: flex-start;
+	display: flex;
+	padding: 10px 20px;
+	left: 5em;
+	position: relative;
+	top: 3em;
+}
+
+.testimonial-box-item span {
+	font-weight: 600;
+}
+
+.testimonial-star {
+	margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+	.testimonial-box {
+		left: 0;
+		bottom: 11em;
+		background-image: url(https://bayareadiscoverymuseum.org/wp-content/uploads/2025/09/testimonialLayer_mobile.png);
+		height: 250px;
+		width: 100%;
+		display: none !important;
+	}
+
+	.testimonial-box-item {
+		left: 0;
+		width: 100%;
+		top: 30px;
+	}
+}
+/* WordPress custom CSS */
+
+			/* ============================================================
+   EXISTING PRODUCTION STYLES (unchanged)
+   Do not delete ΓÇö these handle search button, mobile nav,
+   ActiveCampaign form fallbacks, popups, etc.
+   ============================================================ */
+
+._form-title,
+._html-code {
+	display: none;
+}
+._form_48 {
+	display: block;
+	position: relative;
+}
+.site-footer__form input[type=text] {
+	border: 2px solid #000;
+	background: transparent;
+	font-size: 0.9375rem;
+	color: #000;
+	border-radius: 0;
+	padding-left: 0.625rem;
+	margin-bottom: 15px;
+}
+.site-footer__form ._form-branding {
+	display: none;
+}
+.site-footer ._error._below {
+	position: absolute;
+	top: -10%;
+	color: white;
+}
+.site-footer form button {
+	color: #fff !important;
+	margin-left: 10px;
+	height: auto;
+}
+.site-footer form input[type=text] {
+	width: 100%;
+}
+.site-footer form ._x70055879 {
+	width: 48%;
+	display: inline-block;
+}
+.site-footer form ._x75844259 {
+	display: inline-block;
+	width: 48%;
+	margin-left: 2%;
+}
+.site-footer form button {
+	padding: 8px 12px;
+	float: right;
+	margin-right: -10px;
+}
+@media (max-width: 1200px) {
+	.site-footer form ._x70055879 {
+		width: 100%;
+	}
+	.site-footer form ._x75844259 {
+		width: 100%;
+		margin-left: 0;
+	}
+}
+@media (max-width: 978px) {
+	.site-footer form ._x70055879 {
+		width: 48%;
+		display: inline-block;
+	}
+	.site-footer form ._x75844259 {
+		display: inline-block;
+		width: 48%;
+		margin-left: 2%;
+	}
+	.site-footer form button {
+		margin-right: 0;
+	}
+}
+@media (max-width: 600px) {
+	.site-footer form ._x70055879 {
+		width: 100%;
+	}
+	.site-footer form ._x75844259 {
+		width: 100%;
+		margin-left: 0;
+	}
+	.site-footer form {
+		position: relative;
+	}
+	.site-footer form ._submit {
+		position: absolute;
+		bottom: 15px;
+		height: 30px;
+		right: 0;
+		width: 100px;
+		top: auto;
+		left: auto;
+		font-size: 15px;
+		padding: 5px 15px 8px;
+	}
+	.vertical-slider .site-footer {
+		padding-bottom: 15px;
+	}
+}
+
+.site-main > .wp-block-group ~ .wp-block-group {
+	padding-top: 1.875rem;
+}
+
+.wp-block-cover + .wp-block-group {
+	padding-top: 3.75rem !important;
+}
+
+@media (min-width: 1024px) {
+	body.stick main {
+		padding-top: 115px;
+	}
+}
+
+@media (max-width: 1023px) {
+	body.stick main {
+		padding-top: 152px;
+	}
+}
+
+.site-header__search .search-form .search-field {
+	font-size: 17px;
+}
+
+.vertical-slider__heading {
+	max-width: 470px;
+	hyphens: auto;
+}
+
+/* Temporary Desktop Search styles */
+.site-header__tools {
+	gap: 0;
+}
+.site-header .gtranslate_wrapper {
+	padding-left: 40%;
+	background-position: 25% 13px;
+}
+.site-header .gtranslate_wrapper a {
+	padding-right: 0 !important;
+}
+.search-form {
+	position: relative;
+}
+.site-header__search {
+	padding-right: 13%;
+}
+.site-header__search .search-form .search-field {
+	border-width: 2px;
+}
+.search-submit {
+	position: absolute;
+	right: 14px;
+	top: 5px;
+	padding: 0;
+	background: transparent;
+	border: 0;
+}
+.search-submit img {
+	width: 18px;
+}
+.site-header__search .search-form .search-field {
+	text-transform: none;
+}
+.site-header__search .search-form .search-field::placeholder {
+	opacity: 0.6 !important;
+	font-weight: 500;
+	text-transform: none;
+}
+
+.site-header__search .search-form .search-field:focus {
+	background: transparent;
+}
+
+.related-posts__copy strong {
+	color: #008080;
+}
+.popmake {
+	max-width: 95%;
+	margin-left: 2.5%;
+}
+
+li#menu-item-845:hover {
+	min-height: 140px;
+}
+
+.hero__copy .hero__text {
+	padding-bottom: 0;
+}
+
+.pum-container {
+	max-width: 600px !important;
+	margin-left: auto !important;
+	transform: translateX(-50%);
+}
+.pum-content {
+	color: #000 !important;
+	opacity: 1;
+	padding: 15px;
+}
+.popup-content .wp-block-image {
+	margin-bottom: 15px !important;
+}
+
+.pum-container .pum-title {
+	display: none;
+}
+.pum-close {
+	line-height: 1em !important;
+	padding: 5px 15px 10px !important;
+	font-size: 22px !important;
+}
+
+@media (max-width: 767px) {
+	.wp-block-buttons > .wp-block-button,
+	.wp-block-buttons > .wp-block-button.wp-block-button__width-50 {
+		width: 100%;
+	}
+	.related-posts__cta {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+/* Camps */
+._camps img {
+	aspect-ratio: 3 / 2;
+	object-fit: cover;
+}
+
+/* TEMP: Hide specific block on the page */
+.hide-this-block {
+	display: none !important;
+}
+
+/* Mobile-only: visible up to 767 px */
+@media (min-width: 768px) {
+	.only-mobile {
+		display: none !important;
+	}
+}
+
+/* Desktop-only: visible 768 px and up */
+@media (max-width: 767px) {
+	.only-desktop {
+		display: none !important;
+	}
+}
+
+/* Nav membership — icon inline beside label (matches get tickets row) */
+.main-navigation li:nth-child(2) span {
+	display: inline-block;
+	width: 35px;
+	height: 28px;
+	background: url(https://bayareadiscoverymuseum.org/wp-content/uploads/2025/09/membership-card-1.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left center;
+	margin-right: 10px;
+	flex-shrink: 0;
+	position: relative;
+	top: 0;
+}
+
+.main-navigation li#menu-item-3498:nth-child(2) {
+	background: #FA7F08 !important;
+	flex-grow: 0;
+}
+
+.main-navigation li#menu-item-3498:nth-child(2) a {
+	height: 4rem;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+/* Mobile homepage banner */
+@media (max-width: 430px) and (max-height: 932px) {
+	.vertical-slider__heading {
+		font-size: 30px;
+		margin-bottom: 5px;
+	}
+	.vertical-slider__heading br {
+		display: none;
+	}
+	.vertical-slider__text {
+		padding: 80px 50px 35px;
+		height: 190px;
+	}
+	.testimonial-box-item span {
+		font-size: 14px;
+	}
+	.vertical-slider__cta a.vertical-slider__button {
+		font-size: 16px;
+	}
+	.section.box1 .testimonial-box,
+	.section.box2 .testimonial-box {
+		bottom: 60px;
+	}
+	.section.box3 .testimonial-box,
+	.section.box4 .testimonial-box,
+	.section.box5 .testimonial-box,
+	.section.box6 .testimonial-box {
+		bottom: 65px;
+	}
+	.testimonial-box {
+		background: linear-gradient(to top, rgba(45, 188, 189, 1) 0%, rgba(45, 188, 189, 0.8) 80%, rgba(45, 188, 189, 0) 100%);
+	}
+	.testimonial-box-item {
+		top: 0;
+		padding-top: 30px;
+	}
+}
+
+@media (max-width: 414px) and (max-height: 844px) {
+	.section.box1 .testimonial-box,
+	.section.box2 .testimonial-box {
+		bottom: -145px;
+	}
+	.section.box3 .testimonial-box,
+	.section.box4 .testimonial-box,
+	.section.box5 .testimonial-box,
+	.section.box6 .testimonial-box {
+		bottom: -135px;
+	}
+}
+
+@media (max-width: 414px) and (max-height: 896px) {
+	.testimonial-box-item span {
+		font-weight: 500;
+		font-size: 12px;
+	}
+	.testimonial-box {
+		background: linear-gradient(to top, rgba(45, 188, 189, 1) 0%, rgba(45, 188, 189, 0.8) 80%, rgba(45, 188, 189, 0) 100%);
+		height: 400px;
+		height: 330px;
+	}
+	.testimonial-box-item {
+		top: 0;
+		padding-top: 30px;
+	}
+	.section.box1 .testimonial-box,
+	.section.box2 .testimonial-box {
+		bottom: 10px;
+	}
+	.section.box3 .testimonial-box,
+	.section.box4 .testimonial-box,
+	.section.box5 .testimonial-box,
+	.section.box6 .testimonial-box {
+		bottom: -30px;
+	}
+}
+
+@media (max-width: 414px) and (max-height: 844px) {
+	.section.box1 .testimonial-box,
+	.section.box2 .testimonial-box {
+		bottom: -125px;
+	}
+	.section.box3 .testimonial-box,
+	.section.box4 .testimonial-box,
+	.section.box5 .testimonial-box,
+	.section.box6 .testimonial-box {
+		bottom: -127px;
+	}
+}
+
+@media (max-width: 375px) and (max-height: 812px) {
+	.section.box1 .testimonial-box,
+	.section.box2 .testimonial-box {
+		bottom: -78px;
+	}
+	.section.box3 .testimonial-box,
+	.section.box4 .testimonial-box,
+	.section.box5 .testimonial-box,
+	.section.box6 .testimonial-box {
+		bottom: -100px;
+	}
+	.vertical-slider__text {
+		padding: 70px 50px 40px;
+		height: auto;
+	}
+}
+
+/* Footer Address */
+.site-footer__address {
+	display: block !important;
+}
+
+
+/* License-free homepage vertical slider (replaces fullPage.js) */
+html.fp-enabled,
+html.fp-enabled body {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+html.fp-enabled body.home .site-main,
+html.fp-enabled body.home #primary {
+	padding: 0 !important;
+	margin: 0 !important;
+	min-height: 100vh;
+	background: transparent;
+}
+
+/* Fixed viewport — header overlays on top (matches live fullPage.js) */
+html.fp-enabled body.home #vertical-slider {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	max-height: 100vh;
+	margin: 0;
+	padding: 0;
+	z-index: 1;
+	overflow: hidden;
+}
+
+html.fp-enabled body.home #fullpage.badm-scroll-slider {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+@media (max-width: 1023px) {
+	html.fp-enabled body.home #vertical-slider {
+		top: 152px;
+		height: calc(100vh - 152px);
+		max-height: calc(100vh - 152px);
+	}
+}
+
+/* Slide height is set by JS via --slide-h on the slider container */
+.badm-scroll-slider .badm-slider-track > .fp-section {
+	height: var(--slide-h, 100vh) !important;
+	min-height: var(--slide-h, 100vh) !important;
+	max-height: var(--slide-h, 100vh) !important;
+	flex-shrink: 0;
+	box-sizing: border-box;
+}
+
+/* Hero images must fully cover each slide */
+.vertical-slider .section.box {
+	position: relative;
+	isolation: isolate;
+}
+
+.vertical-slider .section.box picture {
+	position: absolute;
+	inset: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.vertical-slider .section.box picture .cover-img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center center;
+}
+
+.badm-scroll-slider {
+	overflow: hidden;
+	position: relative;
+	touch-action: none;
+}
+
+.badm-scroll-slider .badm-slider-track > .section.fp-auto-height-responsive.is-active {
+	touch-action: pan-y;
+}
+
+.badm-slider-track {
+	display: flex;
+	flex-direction: column;
+	will-change: transform;
+	backface-visibility: hidden;
+}
+
+.badm-scroll-slider .badm-slider-track > .section {
+	position: relative;
+	overflow: hidden;
+}
+
+.badm-scroll-slider .badm-slider-track > .section.fp-auto-height-responsive {
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	overscroll-behavior: contain;
+}
+
+.badm-scroll-slider .badm-slider-track > .section.fp-auto-height-responsive:not(.is-active) {
+	overflow-y: hidden;
+}
+
+/* Hide slide content until active — theme sets all .fp-section.box to opacity:1 */
+.vertical-slider .fp-section.box:not(.active) .cover-img,
+.vertical-slider .fp-section.box:not(.active) .vertical-slider__text,
+.vertical-slider .fp-section.box:not(.active) .testimonial-item,
+.vertical-slider .fp-section.box:not(.active) .testimonial-box {
+	opacity: 0 !important;
+	visibility: hidden !important;
+	pointer-events: none;
+}
+
+.vertical-slider .fp-section.box.active .cover-img,
+.vertical-slider .fp-section.box.active .vertical-slider__text,
+.vertical-slider .fp-section.box.active .testimonial-item,
+.vertical-slider .fp-section.box.active .testimonial-box {
+	opacity: 1 !important;
+	visibility: visible !important;
+	pointer-events: auto;
+}
+
+.badm-scroll-slider .badm-slider-track > .fp-section.box:not(.active) {
+	pointer-events: none;
+}
+
+#fp-nav.fp-left {
+	z-index: 100;
+}
+/* ============================================================
+   SLIDER FOOTER OVERRIDE
+   On the homepage vertical slider, the footer is locked to
+   exactly 100vh by .vertical-slider .site-footer. That clips
+   the redesigned footer (which is taller than 100vh on mobile).
+   Override so it can grow to its natural height on mobile.
+   ============================================================ */
+.vertical-slider .site-footer {
+	height: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-top: 0 !important;
+	padding-bottom: 2.5rem;
+	background-size: cover;
+	background-position: center;
+}
+
+@media (min-width: 1024px) {
+	.vertical-slider .site-footer {
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+@media (max-width: 1023px) {
+	.vertical-slider .site-footer {
+		justify-content: flex-start !important;
+		padding-top: 48px !important;
+		padding-bottom: 32px !important;
+	}
+}
+
+
+/* ============================================================
+   FOOTER REDESIGN ΓÇö appended below existing production styles.
+   ============================================================ */
+
+.site-footer {
+	width: 100%;
+	background-color: transparent;
+	background-image: url('https://bayareadiscoverymuseum.org/wp-content/themes/badm/images/bg-footer-slide.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #ffffff;
+	font-size: 16px;
+	position: relative;
+	padding-top: 64px;
+}
+
+@media (min-width: 768px) {
+	.site-footer {
+		padding-top: 80px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.site-footer {
+		background-size: 90% auto;
+		background-position: left -180px;
+	}
+}
+
+.site-footer::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: rgba(34, 186, 187, 0.55);
+	pointer-events: none;
+	z-index: 0;
+}
+
+.vertical-slider .site-footer::before {
+	background-color: rgba(45, 188, 189, 0.45);
+}
+
+/* Footer-specific wrap (replaces .container to avoid theme conflicts) */
+.site-footer__wrap {
+	position: relative;
+	z-index: 1;
+	max-width: 100%;
+	margin: 0;
+	padding: 0 24px;
+	box-sizing: border-box;
+	display: block;
+}
+
+@media (min-width: 992px) {
+	.site-footer__wrap {
+		padding-right: 260px;
+		padding-left: 40px;
+	}
+}
+
+/* Theme sets .site-footer__main a { color: #000 } — force white footer text */
+.site-footer,
+.site-footer__main,
+.site-footer__subfooter {
+	color: #ffffff !important;
+}
+
+.site-footer a,
+.site-footer__main a,
+.site-footer__subfooter a,
+.site-footer__links a,
+.site-footer__contact-row a,
+.site-footer__copyright a,
+.site-footer a:visited,
+.site-footer__main a:visited,
+.site-footer__links a:visited {
+	color: #ffffff !important;
+}
+
+.site-footer p,
+.site-footer__brand-name,
+.site-footer__brand-meta,
+.site-footer__brand-meta *,
+.site-footer__col-heading,
+.site-footer__links li,
+.site-footer__text,
+.site-footer__copyright,
+.site-footer__copyright p,
+.site-footer__social-label,
+.site-footer__contact-row,
+.site-footer__contact-icon {
+	color: #ffffff !important;
+}
+
+.site-footer__cta,
+.site-footer__cta:visited,
+.site-footer__cta--primary,
+.site-footer__cta--primary:visited,
+.site-footer__cta--primary:hover {
+	color: #ffffff !important;
+}
+
+.site-footer__cta--secondary,
+.site-footer__cta--secondary:visited {
+	color: #ffffff !important;
+	border-color: #ffffff !important;
+}
+
+.site-footer__cta--secondary:hover {
+	color: #348888 !important;
+	background: #ffffff !important;
+}
+
+.site-footer a {
+	text-decoration: none;
+	transition: opacity 0.2s ease;
+}
+
+/* ---------- MAIN ---------- */
+.site-footer__main {
+	padding: 32px 0;
+	display: block;
+}
+
+@media (min-width: 768px) {
+	.site-footer__main {
+		padding: 40px 0;
+	}
+}
+
+/* ---------- BAND 1: TOP ---------- */
+.site-footer__top {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding-bottom: 28px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+	margin-bottom: 3px;
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.site-footer__top {
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 32px;
+		flex-wrap: nowrap;
+	}
+}
+
+.site-footer__brand {
+	flex: 0 1 auto;
+	min-width: 0;
+}
+
+.site-footer__brand-name {
+	font-family: 'Modulus Pro', 'Proxima Nova', sans-serif;
+	font-size: 22px;
+	font-weight: 800;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	line-height: 1.2;
+	color: #ffffff;
+}
+
+.site-footer__brand-meta {
+	font-size: 13px;
+	font-weight: 400;
+	margin-top: 8px;
+	opacity: 0.9;
+	color: #ffffff;
+	line-height: 1.5;
+}
+
+.site-footer__brand-meta * {
+	color: #ffffff !important;
+}
+
+.site-footer__brand-meta p {
+	margin: 0 0 2px;
+}
+
+.site-footer__ctas {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	flex-shrink: 0;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+@media (min-width: 768px) {
+	.site-footer__ctas {
+		justify-content: flex-end;
+	}
+}
+
+.site-footer__cta {
+	display: inline-block;
+	padding: 10px 20px;
+	border-radius: 999px;
+	font-family: 'Modulus Pro', 'Proxima Nova', sans-serif;
+	font-weight: 800;
+	font-size: 13px;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1.2;
+	white-space: nowrap;
+	text-decoration: none !important;
+	transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.site-footer__cta:hover {
+	opacity: 1;
+	text-decoration: none;
+}
+
+.site-footer__cta--primary {
+	background: #FA7F08;
+	color: #ffffff;
+	border: 2px solid #FA7F08;
+}
+
+.site-footer__cta--primary:hover {
+	background: #d96d00;
+	border-color: #d96d00;
+	color: #ffffff;
+}
+
+.site-footer__cta--secondary {
+	background: transparent;
+	color: #ffffff;
+	border: 2px solid #ffffff;
+}
+
+.site-footer__cta--secondary:hover {
+	background: #ffffff;
+	color: #348888;
+}
+
+/* ---------- BAND 2: FOUR COLUMNS ---------- */
+.site-footer__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 24px;
+	width: 100%;
+}
+
+/* Mobile: hide the entire Band 2 grid (Subscribe, Explore, Experiences, Connect) */
+@media (max-width: 767px) {
+	.site-footer__grid {
+		display: none !important;
+	}
+}
+
+@media (min-width: 600px) {
+	.site-footer__grid {
+		grid-template-columns: 1fr 1fr;
+		gap: 32px;
+	}
+}
+
+@media (min-width: 900px) {
+	.site-footer__grid {
+		grid-template-columns: 2fr 1fr 1fr 1fr;
+		gap: 40px;
+	}
+}
+
+.site-footer__col {
+	min-width: 0;
+}
+
+/* ---------- COLUMN HEADINGS ---------- */
+.site-footer__col-heading {
+	font-family: 'Modulus Pro', 'Proxima Nova', sans-serif;
+	font-weight: 700;
+	font-size: 12px;
+	letter-spacing: 1.2px;
+	text-transform: uppercase;
+	margin: 0 0 16px;
+	color: #ffffff;
+	opacity: 0.85;
+}
+
+/* ---------- COLUMN LINKS ---------- */
+.site-footer__links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.site-footer__links li {
+	margin-bottom: 5px;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #ffffff;
+}
+
+.site-footer__links a {
+	border-bottom: 1px solid transparent;
+}
+
+.site-footer__links a:hover {
+	border-bottom-color: rgba(255, 255, 255, 0.6);
+	text-decoration: none;
+	opacity: 1;
+}
+
+.site-footer__text {
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-bottom: 12px;
+	opacity: 0.95;
+	color: #ffffff;
+}
+
+/* ---------- NEWSLETTER FORM (overrides production rules above) ---------- */
+.site-footer__form {
+	margin-bottom: 0px;
+	max-width: 100%;
+	width: 100%;
+}
+
+/* Force visibility for the AC form on desktop only ΓÇö don't override mobile-hide rules */
+@media (min-width: 768px) {
+	.site-footer__form,
+	.site-footer__form > *,
+	.site-footer__form ._form_48,
+	.site-footer__form ._form,
+	.site-footer__form ._form_element,
+	.site-footer__form form {
+		display: block !important;
+		visibility: visible !important;
+		opacity: 1 !important;
+	}
+}
+
+/* Reset the production rules that were laying fields side-by-side */
+.site-footer__form ._form_element,
+.site-footer__form ._x70055879,
+.site-footer__form ._x75844259 {
+	width: 100% !important;
+	max-width: 100% !important;
+	margin-left: 0 !important;
+	float: none !important;
+	display: block !important;
+	clear: both !important;
+}
+
+/* Clear the float on the submit button so it stacks below inputs */
+.site-footer__form ._button-wrapper,
+.site-footer__form ._submit-wrapper {
+	clear: both !important;
+	float: none !important;
+	width: 100% !important;
+	margin-top: 8px !important;
+}
+
+/* Kill the mobile-specific absolute positioning of submit from production CSS */
+@media (max-width: 767px) {
+	/* Reset form field layout on mobile (production CSS sets fields to 48% with floats) */
+	.site-footer__form ._form_element,
+	.site-footer__form ._x70055879,
+	.site-footer__form ._x75844259 {
+		width: 100% !important;
+		max-width: 100% !important;
+		margin: 0 0 8px 0 !important;
+		float: none !important;
+		display: block !important;
+		position: static !important;
+	}
+
+	/* Override production rule that absolute-positions submit button on mobile */
+	.site-footer__form ._submit,
+	.site-footer__form button,
+	.site-footer__form input[type=submit],
+	.site-footer__form ._button-wrapper button {
+		position: static !important;
+		bottom: auto !important;
+		right: auto !important;
+		top: auto !important;
+		left: auto !important;
+		width: auto !important;
+		height: auto !important;
+		margin: 8px 0 0 0 !important;
+		padding: 10px 20px !important;
+		float: none !important;
+		display: inline-block !important;
+		font-size: 13px !important;
+	}
+}
+
+/* Always hide any leaking AC style/branding text inside the footer form,
+   at every screen size (prevents raw CSS showing as text before JS initializes) */
+.site-footer__form style,
+.site-footer__form ._form-branding,
+.site-footer__form ._html-code,
+.site-footer__form noscript {
+	display: none !important;
+}
+
+.site-footer__form h1,
+.site-footer__form h2,
+.site-footer__form h3,
+.site-footer__form ._form-title,
+.site-footer__form ._form_element h1,
+.site-footer__form ._form_element h2,
+.site-footer__form ._form_element h3 {
+	color: #ffffff !important;
+	font-family: 'Modulus Pro', 'Proxima Nova', sans-serif !important;
+	font-size: 13px !important;
+	font-weight: 600 !important;
+	text-transform: none !important;
+	letter-spacing: 0 !important;
+	margin: 0 0 8px !important;
+	line-height: 1.4 !important;
+}
+
+.site-footer__form label,
+.site-footer__form ._form-label {
+	color: #ffffff !important;
+	font-size: 12px !important;
+	font-weight: 500 !important;
+	margin-bottom: 4px !important;
+}
+
+.site-footer__form input[type=email],
+.site-footer__form input[type=text],
+.site-footer__form ._form_element input {
+	background: #ffffff !important;
+	color: #1B3A5C !important;
+	border: none !important;
+	border-radius: 6px !important;
+	padding: 9px 12px !important;
+	font-size: 13px !important;
+	font-family: 'Proxima Nova', sans-serif !important;
+	max-width: 100% !important;
+	width: 100% !important;
+	box-sizing: border-box !important;
+	margin-bottom: 1px !important;
+}
+
+.site-footer__form input::placeholder {
+	color: rgba(27, 58, 92, 0.55);
+}
+
+.site-footer__form button,
+.site-footer__form input[type=submit],
+.site-footer__form ._submit {
+	background: #1B3A5C !important;
+	color: #ffffff !important;
+	border: none !important;
+	border-radius: 6px !important;
+	padding: 9px 18px !important;
+	font-family: 'Modulus Pro', 'Proxima Nova', sans-serif !important;
+	font-weight: 800 !important;
+	font-size: 12px !important;
+	letter-spacing: 0.5px !important;
+	text-transform: uppercase !important;
+	cursor: pointer !important;
+	transition: background 0.2s ease !important;
+	width: auto !important;
+	margin: 8px 0 0 0 !important;
+	float: none !important;
+	position: static !important;
+	display: inline-block !important;
+}
+
+.site-footer__form button:hover,
+.site-footer__form input[type=submit]:hover,
+.site-footer__form ._submit:hover {
+	background: #FA7F08 !important;
+}
+
+/* ---------- CONTACT INFO ---------- */
+.site-footer__contact-info {
+	margin-top: 14px;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.site-footer__contact-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 1px;
+	color: #ffffff;
+}
+
+.site-footer__contact-icon {
+	width: 15px;
+	height: 15px;
+	flex-shrink: 0;
+	opacity: 0.9;
+	color: #ffffff;
+}
+
+.site-footer__contact-row a {
+	color: #ffffff;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+	padding-bottom: 1px;
+}
+
+.site-footer__contact-row a:hover {
+	border-bottom-color: #ffffff;
+	text-decoration: none;
+	opacity: 1;
+}
+
+/* ---------- SUBFOOTER ---------- */
+.site-footer__subfooter {
+	position: relative;
+	z-index: 1;
+	padding: 20px 0 24px;
+	border-top: 1px solid rgba(255, 255, 255, 0.22);
+	font-size: 13px;
+}
+
+.site-footer__subfooter .site-footer__wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+	.site-footer__subfooter .site-footer__wrap {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+@media (max-width: 767px) {
+	.site-footer__subfooter .site-footer__social {
+		align-self: center;
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+.site-footer__copyright {
+	font-size: 12px;
+	line-height: 1.5;
+	opacity: 0.9;
+	color: #ffffff;
+}
+
+.site-footer__copyright p {
+	margin: 0 0 4px;
+	color: #ffffff;
+}
+
+.site-footer__copyright a {
+	text-decoration: underline;
+	opacity: 1;
+}
+
+.site-footer__copyright a:hover {
+	opacity: 0.78;
+}
+
+.site-footer__credit {
+	font-size: 12px;
+	opacity: 0.78;
+}
+
+/* ---------- SOCIAL ICONS ---------- */
+.site-footer__social {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex-shrink: 0;
+}
+
+.site-footer__social-label {
+	font-size: 13px;
+	font-weight: 500;
+	color: #ffffff;
+	opacity: 0.9;
+}
+
+.site-footer__icons {
+	display: flex;
+	gap: 6px;
+}
+
+.site-footer__icons a {
+	display: inline-flex;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.1);
+	transition: background 0.2s ease;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.site-footer__icons a:hover {
+	background: rgba(255, 255, 255, 0.25);
+	opacity: 1;
+	text-decoration: none;
+}
+
+.site-footer__icons img {
+	width: 18px;
+	height: 18px;
+	display: block;
+	filter: brightness(0) invert(1);
+}		
+
+/* Inner page styles (membership, plan your visit, etc.) */
+.page-id-3291 .scroll-indicator {
+	display: none;
+}
+
+.hero__cta {
+	margin-top: 20px;
+}
+
+@media (min-width: 1024px) {
+	.custom-icon-text-container {
+		gap: 3rem !important;
+	}
+}
+
+/* Ready, Set, Play page Starts */
+.custom-group {
+	background: #fff;
+	padding: 50px 0px;
+}
+
+.custom-card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.custom-card-container h4 {
+	text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.custom-card-container p {
+	    color: #000;
+}
+
+.custom-cards {
+    padding: 30px;
+    border-radius: 10px;
+}
+.custom-cards p {
+    margin: 0px;
+}
+
+.custom-testimonial-container {
+	padding: 30px 35px;
+    border: 1px solid #0F3495;
+    border-radius: 15px;
+}
+
+.custom-testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.custom-testimonial h4 {
+	max-width: 800px;
+	margin-inline: auto;
+}
+
+.custom-testimonial p {
+	margin-inline: auto
+}
+
+.custom-tabs-container h2 {
+	max-width: 620px;
+}
+.custom-tabs-container .eb-tabs-nav {
+    max-width: 540px;
+}
+.custom-tabs-content {
+	display: block !important;
+	margin-inline: -10px;
+}
+.custom-tabs-content img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+}
+.custom-tabs-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.custom-tabs-content .custom-tabs-box.current-hidden.slick-slide {
+	display: none!important;
+}
+.wp-block-column {
+	flex-grow:0;
+}
+.custom-icon-text-container {
+    padding: 20px 40px 20px 50px;
+    border-radius: 10px 10px 0px 0px;
+}
+.custom-icon-text-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    border-right: 1px solid #000;
+}
+.custom-icon-text-container.dark.white .custom-icon-text-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    border-right: 1px solid #fff;
+}
+.custom-icon-text-content:last-child {
+	border-right: none;
+}
+.custom-icon-text-container.dark.white .custom-icon-text-content:last-child {
+    border-right: none;
+}
+.custom-icon-text-content p {
+    margin: 0 0 7px 0;
+}
+ul.wp-block-list.custom-list-icon {
+    list-style: none;
+    margin: 0px;
+    padding-bottom: 30px;
+}
+.custom-list-icon li {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+	line-height: 2.5rem;
+}
+.custom-list-icon li::before {
+    content: url(https://bayareadiscoverymuseum.org/wp-content/uploads/2025/08/heart.svg);
+    display: block;
+    width: 23px;
+    height: 19px;
+    margin-bottom: 10px;
+}
+.custom-icon-text-container.dark p {
+    margin: 0px;
+}
+.custom-icon-text-container.dark {
+    padding: 15px 120px;
+    border-radius: 10px;
+    margin-top: -10px;
+    display: flex;
+    justify-content: center !important;
+    gap: 20px !important;
+}
+
+.custom-icon-text-container.dark .custom-icon-text-content {
+	padding-right: 20px;
+    justify-content: center;
+}
+
+.custom-image-with-text {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+.custom-image-with-text img {
+    width: 100%;
+}
+
+.custom-tabs-content .slick-slide {
+padding: 0 10px;
+}
+
+.slick-dots {
+	display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+	gap: 8px;
+}
+
+.slick-dots button {
+	text-indent: -99999px;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 1px solid #22BABB;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.slick-dots .slick-active button {
+	background: #22BABB;
+}
+
+.custom-tabs-content .slick-track {
+	display: flex;
+}
+
+.custom-tabs-content .slick-track .slick-slide {
+	height: auto;
+	display: flex !important;
+}
+
+
+.custom-testimonial-container {
+	display: block !important;
+}
+
+.slick-next.slick-arrow {
+	background: transparent;
+    border: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;
+}
+
+.slick-prev.slick-arrow {
+	background: transparent;
+    border: 0;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    height: auto;
+}
+
+.custom-testimonial-container .slick-dots {
+	
+}
+
+@media screen and (max-width: 768px) {
+	
+.hero__image--mobile {
+    display: block;
+    height: 100%;
+}
+.custom-testimonial h4, .custom-tabs-container h2, .custom-tabs-container .eb-tabs-nav {
+		width: 100%;
+}
+.custom-tabs-container.tabs-section, .custom-padding {
+		margin-top: 20px!important;
+}
+.custom-icon-text-container {
+    border-radius: 10px;
+}
+.custom-list-icon li {
+    line-height: 1.2rem;
+}
+.custom-icon-text-container.dark {
+    display: none;
+}
+.custom-icon-text-container.dark.white {
+    display: flex;
+    padding: 12px 16px;
+    font-size: 18px;
+    line-height: 1.2em;
+}
+
+.custom-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+}
+.custom-icon-text-content, .custom-icon-text-container.dark.white .custom-icon-text-content {
+	border-right: none;
+}
+.hero__heading {
+    font-size: 36px;
+}
+h2.wp-block-heading {
+    font-size: 30px!important;
+}
+.wp-block-columns+.wp-block-columns {
+    margin-top: 0px;
+}
+.custom-icon-text-container.dark.white {
+    gap: 0px !important;
+}
+.custom-card-container h4 {
+    margin-top: 0px;
+	margin-bottom: 0px;
+}
+.custom-cards p {
+    margin: 0px;
+    line-height: 1.2em;
+}
+
+.custom-card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.slick-next.slick-arrow, .slick-prev.slick-arrow {
+    display: none!important;
+}
+.custom-group {
+    padding: 30px 0px;
+}
+}
+/* Ready, Set, Play page Ends */
+
+
+/* Big Art Weekend! page Starts */
+
+@media only screen and (min-width: 1024px) {
+	.gap-2rem {
+		gap: 2rem;
+	}	
+}
+
+
+.custom-background-container-box,
+.gap-1rem {
+    gap: 1rem;
+}
+.custom-background-container {
+    border: 1px solid #2DBCBD66;
+    border-radius: 10px;
+    padding: 20px;
+}
+.big-art-image-box {
+    gap: 2rem;
+	padding: 40px 0px;
+}
+.big-art-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sponser-logos {
+	width: 100%;
+}
+
+.page-id-4088 .wp-block-group {
+	background-image: none;
+}
+
+@media (max-width: 767px) {
+	.sponser-logos {
+		grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+	}
+	
+}
+
+/* Big Art Weekend! page Ends */
+
+/* New Membership Page */
+
+.membership-cards {
+	padding-top: 40px;
+    background: #fff;
+}
+
+
+.hero.membership-hero .scroll-indicator {
+	display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+	.hero.membership-hero .hero__text {
+        padding: 6.875rem 6.25rem 5rem 5rem;
+    }
+}
+
+.membership-nav.jump-nav {
+	background: #2DBCBD;
+    padding: 5px 0;
+}
+
+.membership-nav.jump-nav li {
+	flex-grow: 0;
+}
+
+.membership-nav.jump-nav a {
+	color: #FFF;
+    text-align: left;
+    font-family: "Modulus Pro";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.3;
+    text-transform: uppercase;
+    padding: 11px 0;
+}
+
+.discovery-plan .membership-plan__price-badge--xlarge {
+	width: 116px;
+	height: 116px;
+	font-size: 15px;
+	letter-spacing: -0.02em;
+}
+
+.discovery-plan .membership-plan__pricing {
+	background-color: #fff;
+}
+
+.membership-plan__benefit-line small {
+	color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-family: "Fredoka", sans-serif;
+    text-transform: none;
+}
+
+.membership-banner {
+	background: #fff;
+}
+
+.membership-banner img {
+	width: 100%;
+}
+
+.membership-banner p {
+	color: #000;
+font-size: 27.11px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.membership-banner h4 {
+	color: #03807F;
+font-size: 25.819px;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+text-transform: uppercase;
+}
+
+.membership-banner ul {
+	color: #000;
+	font-size: 23.237px;
+	font-style: normal;
+	line-height: 1.3;
+	margin-left: 30px;
+}
+
+.membership-promo-card {
+	background: #e9faf9;
+    padding: 60px 0;
+}
+
+.membership-promo-card .wp-block-columns {
+    gap: 20px !important;
+}  
+
+.membership-promo-card h2.wp-block-heading {
+	color: #0F3495;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.1;
+    text-transform: uppercase;
+	margin-bottom: 40px;
+	font-size: 2.5625rem;
+}
+
+.promo-2 .promo-card__body {
+	    max-width: 360px;
+}
+.membership-promo-card.faq {
+    padding-top: 50px!important;
+}
+.membership-promo-card.faq .wp-block-details {
+    transition: .25s all ease;
+    border: 1px solid #2DBCBD;
+    border-radius: 10px;
+    max-width: 100%;
+    margin-bottom: 22px;
+    overflow: hidden;
+}
+.membership-promo-card.faq .wp-block-details:last-child {
+    margin-bottom: 0px;
+}
+
+.membership-promo-card.faq .wp-block-details summary {
+    font-weight: 800;
+    font-size: 28px;
+    padding: 30px 40px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Modulus Pro';
+    background-color: #2DBCBD;
+}
+.membership-faq {
+    width: 100%;
+    background: #2DBCBD26;
+	padding: 30px 40px!important;
+}
+.membership-promo-card.faq h4 {
+    color: #0F3495;
+    font-size: 24px;
+    text-decoration: underline;
+    font-weight: 700;
+    font-family: 'Modulus Pro';
+}
+.membership-promo-card.faq p {
+    color: #0F3495;
+    font-size: 21px;
+    font-weight: 500;
+    font-family: 'Modulus Pro';
+	margin-left: 28px;
+}
+.membership-promo-card.faq p:last-child {
+    margin-bottom: 0px;
+}
+.wp-block-columns.ready-to-join-box {
+    display: flex;
+    gap: 50px!important;
+    padding-top: 40px;
+}
+.ready-to-join.text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ready-to-join h3 {
+    text-transform: uppercase;
+    font-size: 39px;
+    color: #0F3495;
+    margin-bottom: 1.25rem;
+}
+.ready-to-join h5 {
+    font-size: 26px;
+    color: #0F3495;
+}
+.ready-to-join .wp-block-buttons {
+    margin-bottom: 0px;
+}
+
+@media only screen and (min-width: 1024px) {
+.membership-promo-card.faq .wp-block-details summary {
+    font-size: 26px;
+    padding: 26px 30px;
+}
+.membership-faq {
+	padding: 26px 30px!important;
+}
+
+.membership-promo-card.faq p {
+	margin-left: 20px;
+}
+.ready-to-join h3 {
+    font-size: 32px;
+	margin-bottom: 15px;
+}
+.ready-to-join h5 {
+    font-size: 24px;
+	margin-bottom: 15px;
+}
+}
+@media only screen and (max-width: 767px) {
+.hero__copy .hero__text {
+    padding-bottom: 20px!important;
+}
+.discovery-plan .membership-plan__price-badge--xlarge {
+    font-size: 14px;
+}
+.membership-promo-card.faq .wp-block-details summary {
+    font-size: 20px;
+    padding: 20px;
+}
+.membership-faq {
+	padding: 20px!important;
+}
+.membership-promo-card.faq p {
+	margin-left: 20px;
+}
+.ready-to-join h3 {
+    font-size: 28px;
+	margin-bottom: 15px;
+}
+.ready-to-join h5 {
+    font-size: 22px;
+	margin-bottom: 15px;
+}
+}
+
+
+/* Plan your visit Starts */
+
+.membership-banner.first-time-visit {
+	padding: 60px 0px 25px!important;
+}
+.membership-promo-card.faq.first-time-visit .wp-block-details summary {
+    background-color: #2DBCBD26;
+    color: #03807F;
+    padding: 26px 40px;
+}
+.membership-promo-card.faq.first-time-visit .membership-faq {
+    padding: 0px 40px 26px!important;
+}
+.membership-promo-card.faq.first-time-visit h4 {
+    color: #000;
+    font-size: 18px;
+	text-decoration: none;
+}
+.membership-promo-card.faq.first-time-visit ul.wp-block-list {
+    margin-left: 35px;
+}
+.ready-to-join-box.first-time-visit .wp-block-image img {
+width: 100%;
+}
+.membership-promo-card.faq.first-time-visit {
+    padding-top: 0px!important;
+}
+.membership-promo-card.faq.first-time-visit h5 {
+    width: 300px;
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+.membership-promo-card.faq.first-time-visit p {
+    margin-left: 0px;
+    color: #000000!important;
+    font-size: 18px;
+    font-weight: 500;
+    width: 350px;
+}
+.membership-promo-card.faq.first-time-visit h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+.membership-promo-card.faq.first-time-visit h3 {
+    font-size: 1.5rem;
+    color: #0F3495;
+    margin-bottom: .50rem;
+}
+.contact-us.text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.wp-block-columns.promo-card-box {
+    display: flex;
+    flex-direction: row;
+    gap: 76px!important;
+}
+.wp-block-columns.promo-card-box .promo-card__icon img {
+    width: 82px;
+    height: 82px;
+    display: block;
+    object-fit: contain;
+}
+.wp-block-columns.promo-card-box .promo-card__heading {
+    font-size: 24px;
+    color: #03807F;
+}
+.wp-block-columns.promo-card-box .promo-card__body {
+    margin-bottom: 0px;
+}
+.membership-promo-card.box {
+    padding: 60px 0!important;
+}
+.membership-promo-card.box .promo-card {
+    height: 100%;
+}
+
+.admission-block {
+    padding: 70px 0 50px;
+    background-image: none;
+}
+.admission-block .wp-block-columns.is-layout-flex {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+}
+.admission-block .admission-block-right-box .wp-block-columns.is-layout-flex,
+.admission-block .admission-block-left-box .wp-block-columns.is-layout-flex {
+    display: flex !important;
+}
+.admission-block .admission-block-right-box {
+    border: 1px solid #2DBCBD66;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+.admission-block .admission-block-left-box .ticket-price, .admission-block .admission-block-right-box .ticket-price {
+    border-bottom: 1px solid #03807F54;
+    padding-bottom: 15px;
+	margin-bottom: 15px;
+	margin-top: 0px;
+}
+.wp-block-buttons.admission-btn {
+    margin: 20px 0px 50px;
+}
+.close-dates .wp-block-list {
+    margin: 0 0 10px 30px;
+}
+.admission-block .wp-block-media-text {
+   margin-bottom: 20px;         
+}
+.admission-block .wp-block-media-text h2 {
+	font-size: 34px;
+	width: 345px;    
+	margin-bottom: 0px;
+}
+.admission-block .close-dates {
+    margin-top: 15px;
+}
+.wp-block-media-text__media img {
+        width: 74px;
+}
+.wp-block-media-text>.wp-block-media-text__content {
+    padding: 0px 15px;
+}
+.admission-block .eb-text-wrapper {
+    margin-bottom: 0;
+}
+.admission-block .eb-text-wrapper .eb-text {
+    margin-bottom: 0;
+	font-family: 'Modulus Pro';
+	color: #000;
+	font-weight: 500;
+}
+.admission-block .eb-text-wrapper .eb-text strong {
+	font-weight: 700;
+}
+.admission-block .admission-block-left-box .custom-bg-box {
+    position: relative;
+    background: #2DBCBD1A;
+    padding: 14px 24px 44px;
+    border-radius: 10px;
+}
+.admission-block .admission-block-left-box .custom-bg-box .wp-block-essential-blocks-text {
+    padding: 10px;
+}
+.admission-block .admission-block-left-box .custom-bg-box .wp-block-essential-blocks-text .eb-text {
+    font-family: "Modulus Pro", sans-serif;
+    color: #03807F;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 110.00000000000001%;
+    letter-spacing: 0%;
+}
+.admission-block .admission-block-left-box .custom-bg-box .wp-block-essential-blocks-text .eb-text strong {
+    font-weight: 800;
+}
+.admission-block .admission-block-right-box .ticket-price .eb-text,
+.admission-block .admission-block-left-box .ticket-price .eb-text {
+	font-family: 'Modulus Pro', sans-serif;
+	color: #000;
+	font-weight: 500;
+	word-break: break-word;
+	min-width: 0;
+}
+
+.admission-block .ticket-price .wp-block-column:last-child:not(:only-child) {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.admission-block .ticket-price .wp-block-column:only-child {
+    text-align: left;
+    flex-shrink: 1;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.admission-block .admission-block-left-box .custom-bg-box .custom-btn {
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    margin: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+	
+.hero__copy .hero__text {
+    padding-bottom: 20px!important;
+}
+.wp-block-columns.promo-card-box {
+    display: flex;
+    gap: 20px!important;
+}	
+.membership-promo-card.faq.first-time-visit h5,	.membership-promo-card.faq.first-time-visit p {
+    width: 100%;
+}
+.admission-block .wp-block-columns.is-layout-flex {
+    display: grid !important;
+    grid-template-columns: 1fr;
+}
+.admission-block .admission-block-right-box {
+   margin-top: 80px;
+}
+.admission-block .wp-block-media-text {
+    display: grid;
+    grid-template-columns: 9% auto!important;
+}
+.admission-block .admission-block-left-box .ticket-price, .admission-block .admission-block-right-box .ticket-price {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+}
+}
+
+@media only screen and (max-width: 767px) {
+
+.hero__copy .hero__text {
+    padding-bottom: 20px!important;
+}
+.wp-block-columns.promo-card-box {
+    display: flex;
+    gap: 20px!important;
+}	
+.membership-promo-card.faq.first-time-visit h5,	.membership-promo-card.faq.first-time-visit p {
+    width: 100%;
+}
+.admission-block .wp-block-columns.is-layout-flex {
+    display: grid !important;
+    grid-template-columns: 1fr;
+}
+.admission-block .ticket-price.wp-block-columns.is-layout-flex {
+    display: grid !important;
+    grid-template-columns: auto 1fr;
+}
+.admission-block .wp-block-media-text {
+    margin-bottom: 20px;
+}
+	.admission-block .admission-block-right-box {
+    padding: 30px 20px;
+}
+.admission-block .wp-block-media-text {
+    display: grid;
+    grid-template-columns: 12% auto!important;
+}
+.admission-block .wp-block-media-text h2 {
+	width: 100%;
+
+}
+}
+
+@media only screen and (max-width: 480px) {
+.wp-block-media-text>.wp-block-media-text__content {
+    grid-column: 2!important;
+    grid-row: 1!important;
+}
+.admission-block .wp-block-media-text h2 {
+    font-size: 22px!important;
+	width: 100%;
+	margin-bottom: 0px;
+}
+.admission-block .wp-block-media-text {
+    display: grid;
+    grid-template-columns:13% auto!important;
+}
+.wp-block-media-text__media img {
+    width: 40px;
+}
+.membership-promo-card.faq.first-time-visit .membership-faq {
+    padding: 0px 20px 26px!important;
+}
+.membership-promo-card.faq.first-time-visit .wp-block-details summary {
+    padding: 26px 20px;
+}
+}
+
+/* Plan your visit Endss */

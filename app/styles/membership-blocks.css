@@ -1,0 +1,586 @@
+/* ==========================================================================
+   Membership Plan Block
+   ========================================================================== */
+
+.membership-cards .wp-block-columns {
+    gap: 20px !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+}
+
+/* Keep two-card rows on desktop even with global wp-column overrides */
+.membership-cards .wp-block-column {
+    flex-grow: 1 !important;
+    min-width: 0;
+}
+
+@media (max-width: 900px) {
+    .membership-cards .wp-block-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Color scheme variables
+   — Edit values here to update all colours across the block at once.
+   -------------------------------------------------------------------------- */
+
+.membership-plan--orange {
+    --mp-primary:        #fa7f09;
+    --mp-primary-light:  rgba(245, 126, 32, 0.14);
+    --mp-primary-border: rgba(245, 126, 32, 0.4);
+    --mp-primary-hover:  #e06f00;
+    --mp-label-left:     #03807f;
+    --mp-label-right:    #2DBCBD;
+    --mp-primary-button: #fa7f09;
+    --mp-button:         #03807f;
+    --mp-button-hover:   #026b6a;
+}
+
+.membership-plan--teal {
+    --mp-primary:        #2DBCBD;
+    --mp-primary-light:  rgba(45, 188, 189, 0.15);
+    --mp-primary-border: rgba(45, 188, 189, 0.4);
+    --mp-primary-hover:  #22BABB;
+    --mp-label-left:     #03807f;
+    --mp-label-right:    #fa7f09;
+    --mp-primary-button: #fa7f09;
+    --mp-button:         #03807f;
+    --mp-button-hover:   #026b6a;
+}
+
+/* --------------------------------------------------------------------------
+   Block wrapper
+   -------------------------------------------------------------------------- */
+
+.membership-plan {
+    position: relative;
+    font-family: 'Modulus Pro', sans-serif;
+    margin-bottom: 30px;
+}
+
+/* --------------------------------------------------------------------------
+   Labels (tabs above the card)
+   -------------------------------------------------------------------------- */
+
+.membership-plan__labels {
+    display: flex;
+    margin-bottom: -10px; /* Pull up the labels to overlap the card's border */
+}
+
+.membership-plan__label {
+    padding: 12px 20px 22px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+}
+
+.membership-plan__label--left {
+    background-color: var(--mp-label-left);
+    border-radius: 10px 10px 0 0;
+}
+
+.membership-plan__label--right {
+    background-color: var(--mp-label-right);
+    border-radius: 10px 10px 0 0;
+}
+
+/* --------------------------------------------------------------------------
+   Card container
+   -------------------------------------------------------------------------- */
+
+.membership-plan__card {
+    background: #fff;
+    border: 1px solid var(--mp-primary-border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Header bar
+   -------------------------------------------------------------------------- */
+
+.membership-plan__header {
+    position: relative;
+    background-color: var(--mp-primary);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.membership-plan__header-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.membership-plan__star {
+    width: 37px;
+    height: 37px;
+    flex-shrink: 0;
+}
+
+.membership-plan__tier {
+    font-size: 34px;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+}
+
+/* Price badge — white circle with primary-colour ring and text */
+.membership-plan__price-badge {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border: 3px solid var(--mp-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--mp-primary);
+    line-height: 1.1;
+    z-index: 1;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.membership-plan__price-badge--long {
+    width: 104px;
+    height: 104px;
+    font-size: 22px;
+    letter-spacing: -0.03em;
+}
+
+.membership-plan__price-badge--xlarge {
+    width: 112px;
+    height: 112px;
+    right: 14px;
+    font-size: 17px;
+    letter-spacing: -0.02em;
+}
+
+@media (max-width: 500px) {
+    .membership-plan__price-badge {
+        width: 94px;
+        height: 94px;
+        right: 12px;
+        top: 8px;
+        font-size: 24px;
+    }
+
+    .membership-plan__price-badge--long {
+        width: 98px;
+        height: 98px;
+        font-size: 19px;
+    }
+
+    .membership-plan__price-badge--xlarge {
+        width: 106px;
+        height: 106px;
+        font-size: 15px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Who's Included row
+   -------------------------------------------------------------------------- */
+
+.membership-plan__who-included {
+    background-color: var(--mp-primary-light);
+    padding: 11px 32px 11px;
+}
+
+@media (max-width: 500px) {
+    .membership-plan__who-included {
+        padding: 11px 120px 11px 20px;
+    }
+}
+
+.membership-plan__section-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #000;
+    text-transform: uppercase;
+    margin: 0 0 4px;
+    line-height: 1.2;
+}
+
+.membership-plan__who-included-text {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   Accordion items
+   -------------------------------------------------------------------------- */
+
+.membership-plan__accordion-item {
+    background: #fff;
+    border-top: 1px solid var(--mp-primary-border);
+}
+
+.membership-plan__accordion-trigger {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 16px 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Modulus Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+
+@media (max-width: 500px) {
+    .membership-plan__accordion-trigger {
+        padding: 16px 20px 16px 20px;
+    }
+}
+
+.membership-plan__accordion-trigger:focus-visible {
+    outline: 2px solid var(--mp-label-left);
+    outline-offset: -2px;
+}
+
+.membership-plan__accordion-icon {
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1;
+    color: #000;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+.membership-plan__accordion-content {
+    font-family: 'Fredoka', sans-serif;
+    padding: 0 32px 16px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    line-height: 1.5;
+}
+
+.membership-plan__accordion-content ul {
+    margin: -10px 0 0 0;
+    padding: 0 0 0 20px;
+}
+
+.membership-plan__accordion-content a {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Pricing row
+   -------------------------------------------------------------------------- */
+
+.membership-plan__pricing {
+    background-color: var(--mp-primary-light);
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--mp-primary-border);
+}
+
+@media (max-width: 500px) {
+    .membership-plan__pricing {
+        padding: 14px 20px 14px 20px;
+    }
+}
+
+.membership-plan__pricing-label {
+    font-size: 18px;
+    font-weight: 800;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.membership-plan__pricing-value {
+    font-size: clamp(14px, 2.4vw, 18px);
+    font-weight: bold;
+    color: #000;
+    text-align: right;
+    line-height: 1.2;
+    max-width: 58%;
+    word-break: break-word;
+}
+
+/* --------------------------------------------------------------------------
+   CTA button
+   -------------------------------------------------------------------------- */
+
+.membership-plan__cta {
+    margin-top: 13px;
+}
+
+.membership-plan__cta-link {
+    display: inline-block;
+    background-color: var(--mp-primary-button);
+    color: #000 !important;
+    text-align: center;
+    padding: 18px 20px;
+    font-family: 'Modulus Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    border-radius: 0;
+    transition: background-color 0.15s ease;
+}
+
+.membership-plan__cta-link:hover,
+.membership-plan__cta-link:focus-visible {
+    background-color: var(--mp-primary-hover);
+    color: #000;
+}
+
+/* --------------------------------------------------------------------------
+   Benefit lines (simple text rows inside the card)
+   -------------------------------------------------------------------------- */
+
+.membership-plan__benefit-line {
+    background-color: var(--mp-primary-light);
+    border-top: 1px solid var(--mp-primary-border);
+    padding: 16px 32px;
+    font-family: 'Modulus Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+
+@media (max-width: 500px) {
+    .membership-plan__benefit-line {
+        padding: 16px 120px 16px 20px;
+    }
+}
+
+.membership-plan__benefit-line:nth-of-type(odd) {
+    background: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   Footer accordions (below CTA, outside card)
+   -------------------------------------------------------------------------- */
+
+.membership-plan__footer-accordions {
+    margin-top: 4px;
+}
+
+.membership-plan__footer-accordion-item {
+    border-bottom: 2px solid #FA7F09;
+}
+
+.membership-plan__footer-accordion-trigger {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 16px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Modulus Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #0F3495 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+
+.membership-plan__footer-accordion-trigger:focus-visible {
+    outline: 2px solid var(--mp-primary);
+    outline-offset: 2px;
+}
+
+.membership-plan__footer-accordion-trigger .membership-plan__accordion-icon {
+    color: #0F3495 !important;
+}
+
+.membership-plan__footer-accordion-item .membership-plan__accordion-content {
+    padding: 0 0 16px;
+}
+
+/* --------------------------------------------------------------------------
+   Footer buttons (side-by-side, below footer accordions)
+   -------------------------------------------------------------------------- */
+
+.membership-plan__footer-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.membership-plan__footer-btn {
+    flex: 1;
+    display: block;
+    background-color: var(--mp-button);
+    color: #fff !important;
+    text-align: center;
+    padding: 18px 12px;
+    font-family: 'Modulus Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    border-radius: 0;
+    transition: background-color 0.15s ease;
+}
+
+.membership-plan__footer-btn:hover,
+.membership-plan__footer-btn:focus-visible {
+    background-color: var(--mp-button-hover);
+    color: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   Editor preview adjustments
+   -------------------------------------------------------------------------- */
+
+.wp-block[data-type="acf/membership-plan"] .membership-plan {
+    pointer-events: none;
+}
+
+/*# sourceURL=https://bayareadiscoverymuseum.org/wp-content/themes/badm/blocks/membership-plan/editor.css */
+
+/* ==========================================================================
+   Promo Card Block
+   ========================================================================== */
+
+.promo-card {
+    background: #fff;
+    border: 1px solid rgba(44, 188, 189, 0.4);
+    border-radius: 10px;
+    padding: 24px 26px 28px;
+    font-family: 'Modulus Pro', sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   Icon
+   -------------------------------------------------------------------------- */
+
+.promo-card__icon {
+    margin-bottom: 16px;
+}
+
+.promo-card__icon img {
+    width: 103px;
+    height: 103px;
+    display: block;
+    object-fit: contain;
+}
+
+/* --------------------------------------------------------------------------
+   Heading
+   -------------------------------------------------------------------------- */
+
+.promo-card__heading {
+    font-family: 'Modulus Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #0f3495;
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    margin: 0 0 12px;
+}
+
+/* --------------------------------------------------------------------------
+   Body text
+   -------------------------------------------------------------------------- */
+
+.promo-card__body {
+    font-family: "Fredoka", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.promo-card__body p {
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   CTA button
+   -------------------------------------------------------------------------- */
+
+.promo-card__cta-link {
+    display: inline-block;
+    background-color: #fa7f09;
+    color: #000 !important;
+    text-align: center;
+    padding: 18px 24px;
+    font-family: 'Modulus Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    border-radius: 0;
+    transition: background-color 0.15s ease;
+    min-width: 311px;
+}
+
+.promo-card__cta-link:hover,
+.promo-card__cta-link:focus-visible {
+    background-color: #e06f00;
+    color: #000 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Editor preview adjustments
+   -------------------------------------------------------------------------- */
+
+.wp-block[data-type="acf/promo-card"] .promo-card {
+    pointer-events: none;
+}
+
+/*# sourceURL=https://bayareadiscoverymuseum.org/wp-content/themes/badm/blocks/promo-card/editor.css */
+
+/*Slider/Motion Slider*/
+.acf-block-preview.wp-block-acf-banner-photo {
+    background-image: url(https://bayareadiscoverymuseum.org/wp-content/themes/badm/blocks/jump-nav/thumbnail.png);
+}
+.acf-block-preview .callout {
+    display: none;
+}
+/*# sourceURL=https://bayareadiscoverymuseum.org/wp-content/themes/badm/blocks/jump-nav/editor.css */

@@ -1,0 +1,84 @@
+/* Give page — scroll parallax image bands between sections */
+
+.give-parallax-divider {
+  min-height: 400px !important;
+  height: 400px !important;
+  max-height: 400px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  background: #1a1a1a;
+}
+
+.give-parallax-divider__image {
+  position: absolute;
+  z-index: 0;
+  top: -30%;
+  left: 0;
+  width: 100%;
+  height: 160%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Subtle colour wash — must not hide the photo (original uses dim-0 = invisible) */
+.give-parallax-divider__tint {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.give-parallax-divider .wp-block-cover__inner-container {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Override theme rules that hide or flatten cover backgrounds */
+.give-parallax-divider.wp-block-cover .wp-block-cover__background {
+  display: none !important;
+}
+
+.page-give .wp-block-cover + .wp-block-group {
+  padding-top: 3.75rem !important;
+}
+
+.page-give .give-discovery-section {
+  scroll-margin-top: 120px;
+}
+
+.page-give #discoverycircle.wp-block-group {
+  padding-top: 3.75rem;
+  padding-bottom: 2rem;
+}
+
+.page-give .wp-block-details summary {
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .give-parallax-divider__image {
+    top: 0 !important;
+    height: 100% !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .give-parallax-divider {
+    min-height: 280px !important;
+    height: 280px !important;
+    max-height: 280px !important;
+  }
+
+  .page-give .give-discovery-section {
+    scroll-margin-top: 96px;
+  }
+}

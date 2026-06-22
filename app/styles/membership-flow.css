@@ -1,0 +1,362 @@
+/* Verify membership + change membership flow pages */
+
+.membership-flow {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  padding-top: 1.75rem;
+  max-width: 920px;
+}
+
+.membership-flow__title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.membership-flow__title-row--wide {
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.membership-flow__title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.2;
+}
+
+.membership-flow__title-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.membership-flow__title-cta--verify {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.membership-flow__join-now,
+.membership-flow__verify-btn {
+  display: inline-block;
+  background: #f58220;
+  color: #000 !important;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+}
+
+.membership-flow__verify-btn {
+  color: #fff !important;
+}
+
+.membership-flow__lead,
+.membership-flow__intro-copy p {
+  margin: 0 0 1rem;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 52rem;
+}
+
+.membership-flow__intro-copy {
+  margin-bottom: 1.5rem;
+}
+
+.membership-flow__form {
+  max-width: 520px;
+}
+
+.membership-flow__field {
+  display: block;
+  margin-bottom: 0.65rem;
+}
+
+.membership-flow__field input {
+  width: 100%;
+  border: 0;
+  background: #f1f1f1;
+  padding: 0.9rem 1rem;
+  font-size: 14px;
+  font-family: inherit;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.membership-flow__field input::placeholder {
+  color: #666;
+}
+
+.membership-flow__field input:focus {
+  outline: 2px solid #40c4c4;
+  outline-offset: 0;
+}
+
+.membership-flow__error {
+  margin: 0.5rem 0 0;
+  color: #b00020;
+  font-size: 14px;
+}
+
+.membership-flow__alt-link {
+  margin: 1rem 0 1.25rem;
+  font-size: 14px;
+}
+
+.membership-flow__alt-link a,
+.membership-flow__text-link,
+.membership-flow__back {
+  color: #0f3495;
+  text-decoration: underline;
+}
+
+.membership-flow__back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 14px;
+}
+
+.membership-flow__actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.membership-flow__actions--success {
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.membership-flow__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 9.5rem;
+  padding: 0.85rem 1.25rem;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  color: #000;
+}
+
+.membership-flow__btn--cancel,
+.membership-flow__btn--secondary {
+  background: #a8f1e9;
+}
+
+.membership-flow__btn--submit,
+.membership-flow__btn--primary {
+  background: #40c4c4;
+}
+
+.membership-flow__help {
+  margin: 2rem 0 0;
+  font-size: 14px;
+}
+
+.membership-flow__help a {
+  color: #0f3495;
+}
+
+.membership-flow--success p {
+  max-width: 40rem;
+  line-height: 1.5;
+}
+
+/* Change membership list */
+.membership-change-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.membership-change-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  border: 1px solid #d5d5d5;
+  padding: 1.25rem 1.5rem;
+}
+
+.membership-change-card__tier {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #555;
+}
+
+.membership-change-card__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 42rem;
+}
+
+.membership-change-card__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.membership-change-card__details {
+  color: #0f3495;
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+.membership-change-card__join {
+  display: inline-block;
+  background: #40c4c4;
+  color: #000 !important;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.7rem 1.1rem;
+  white-space: nowrap;
+}
+
+/* Tier detail */
+.membership-tier-detail {
+  border: 1px solid #d5d5d5;
+  padding: 1.5rem;
+}
+
+.membership-tier-detail__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.membership-tier-detail__title {
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #555;
+}
+
+.membership-tier-detail__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 42rem;
+}
+
+.membership-tier-detail__join {
+  display: inline-block;
+  background: #40c4c4;
+  color: #000 !important;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.membership-tier-detail__features {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.membership-tier-detail__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.45rem 0;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.membership-tier-detail__check {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: #f58220;
+  margin-top: 0.1rem;
+}
+
+.membership-tier-detail__options-title {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.membership-tier-detail__options-table {
+  border-top: 1px solid #e5e5e5;
+}
+
+.membership-tier-detail__options-row {
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr 1fr auto;
+  gap: 0.5rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 14px;
+}
+
+.membership-tier-detail__options-row--head {
+  font-weight: 700;
+}
+
+.membership-tier-detail__options-row span:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .membership-flow__title-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .membership-flow__title-cta {
+    white-space: normal;
+  }
+
+  .membership-change-card,
+  .membership-tier-detail__header {
+    flex-direction: column;
+  }
+
+  .membership-change-card__actions {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .membership-tier-detail__options-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .membership-tier-detail__options-row span:last-child {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+
+  .membership-flow__actions {
+    flex-direction: column;
+  }
+
+  .membership-flow__btn {
+    width: 100%;
+  }
+}

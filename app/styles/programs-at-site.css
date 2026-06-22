@@ -1,0 +1,162 @@
+/* Programs at Your Site — signup form + footer */
+.school-programs-signup {
+  font-family: Roboto, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 25px auto 0;
+  max-width: 600px;
+  padding: 20px;
+  background: #fff;
+}
+
+.school-programs-signup__title {
+  color: #000;
+  display: block;
+  font-family: Roboto, arial, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 0 12px;
+}
+
+.school-programs-signup__fields {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0 20px;
+}
+
+.school-programs-signup__field {
+  flex: 1 1 150px;
+  margin-bottom: 10px;
+}
+
+.school-programs-signup__field label {
+  color: #000;
+  display: block;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.school-programs-signup__field input {
+  border: 1px solid #979797;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 14px;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+.school-programs-signup__submit-wrap {
+  margin-top: 12px;
+}
+
+.school-programs-signup__submit {
+  appearance: none;
+  background: #004cff !important;
+  border: 0;
+  border-radius: 4px;
+  color: #fff !important;
+  cursor: pointer;
+  font-family: Roboto, arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.school-programs-signup--thanks p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.field-required {
+  color: #ff0000;
+}
+
+@media (min-width: 667px) {
+  .school-programs-signup__submit-wrap {
+    margin-top: 27px;
+  }
+}
+
+/* Summer birthday promo headings */
+.page-summer-birthdays .wp-block-heading:first-of-type {
+  text-transform: uppercase;
+}
+
+.page-summer-birthdays h3.wp-block-heading {
+  color: #03807f;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+
+/* Tile grid buttons — uppercase black on orange (live site) */
+.page-tile-grid .wp-block-button__link,
+.page-camps-grid .wp-block-button__link {
+  color: #000 !important;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.page-tile-grid .wp-block-column h3.wp-block-heading {
+  color: #008080;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.2;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+/* Camps 3-column grid spacing */
+.page-camps-grid .wp-block-columns {
+  gap: 1.5rem;
+}
+
+.page-camps-grid .wp-block-image.is-style-shape-angle img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+/* Summer / school year camp listing pages */
+.page-camps-listing .camp-age-heading {
+  color: #008080;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.page-camps-listing .camp-listing h2.wp-block-heading {
+  color: #0f3495;
+  font-size: 1.375rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.page-camps-listing .camp-listing__ages {
+  color: #008080;
+  font-size: 1.125rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.page-camps-listing .camp-listing__note {
+  font-size: 0.9375rem;
+}
+
+.page-camps-listing .school-break-camp h2.wp-block-heading {
+  color: #0f3495;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.featured-classes-wrap--inner {
+  position: relative;
+  z-index: 8;
+}
