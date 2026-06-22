@@ -446,7 +446,8 @@ export const kfhEvents = [
     buttonHref: '/about/strategic-plan-financials/',
   },
   {
-    image: kfhImages.welcome,
+    image:
+      '/images/kfh/8b0fefd2d41a0c963a1bd6c3bfb14c33.jpg',
     title: 'Working from Home? We\'ve Got You',
     paragraphs: [
       'Calling all working from home moms & dads! Our child minders are ready to entertain your little whirlwinds while you work in peace. R99 per child for unlimited playtime. Over 8 play zones, child minders, and wifi access.',
