@@ -3,6 +3,8 @@
 import Script from 'next/script';
 import { themeScripts } from '../lib/assets';
 
+const GT_LANGS = "['en', 'af']";
+
 export default function ThemeScripts() {
   return (
     <>
@@ -16,9 +18,17 @@ export default function ThemeScripts() {
             window.gtranslateSettings = window.gtranslateSettings || {};
             window.gtranslateSettings['10404244'] = {
               default_language: 'en',
-              languages: ['en', 'es'],
+              languages: ${GT_LANGS},
               url_structure: 'none',
               wrapper_selector: '#gt-wrapper-10404244',
+              horizontal_position: 'inline',
+              flags_location: '/wp-content/plugins/gtranslate/flags/'
+            };
+            window.gtranslateSettings['73161132'] = {
+              default_language: 'en',
+              languages: ${GT_LANGS},
+              url_structure: 'none',
+              wrapper_selector: '#gt-wrapper-73161132',
               horizontal_position: 'inline',
               flags_location: '/wp-content/plugins/gtranslate/flags/'
             };
@@ -29,6 +39,11 @@ export default function ThemeScripts() {
         src="https://bayareadiscoverymuseum.org/wp-content/plugins/gtranslate/js/lc.js"
         strategy="lazyOnload"
         data-gt-widget-id="10404244"
+      />
+      <Script
+        src="https://bayareadiscoverymuseum.org/wp-content/plugins/gtranslate/js/lc.js"
+        strategy="lazyOnload"
+        data-gt-widget-id="73161132"
       />
     </>
   );

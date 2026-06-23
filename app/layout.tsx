@@ -9,6 +9,7 @@ import './styles/programs-at-site.css';
 import './styles/mobile-responsive.css';
 import { siteConfig } from './lib/siteConfig';
 import { themeStyles } from './lib/assets';
+import ThemeScripts from './components/ThemeScripts';
 
 const fredoka = Fredoka({
   subsets: ['latin'],
@@ -37,6 +38,7 @@ export default function RootLayout({
       </head>
       <body className="wp-custom-logo wp-theme-badm">
         {children}
+        <ThemeScripts />
       </body>
     </html>
   );

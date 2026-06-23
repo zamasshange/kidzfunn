@@ -1,7 +1,6 @@
 import Header from './Header';
 import Footer from './Footer';
 import FeaturedClassesBar from './FeaturedClassesBar';
-import ThemeScripts from './ThemeScripts';
 import BodyClass from './BodyClass';
 
 export default function PageLayout({
@@ -26,7 +25,6 @@ export default function PageLayout({
           {children}
         </main>
         <Footer />
-        <ThemeScripts />
       </div>
     </>
   );
